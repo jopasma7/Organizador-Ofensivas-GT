@@ -21,9 +21,9 @@ ENV/
 *.swp
 *.swo
 
-# Outputs (opcional - descomenta si no quieres subir los planes generados)
-# plan_*.txt
-# *.csv
+# Outputs - archivos generados
+plan_*.txt
+*.csv
 
 # OS
 .DS_Store
