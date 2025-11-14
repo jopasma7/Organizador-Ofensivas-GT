@@ -1,0 +1,2190 @@
+================================================================================
+PLAN DE ATAQUE - GUERRAS TRIBALES
+================================================================================
+
+🌍 Mundo: Mundo ES95 (Velocidad: 1x)
+🏃 Tipo de tropa: ariete (30.0 min/campo)
+🎯 Hora de llegada objetivo: 25/11/2025 12:00:00
+
+
+================================================================================
+OBJETIVO #1: (C002) Cataratas Du Traseiro (491|478)
+Prioridad: 1 | Defensor: davidx
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 497|547 (Choco (497|547) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 9000 hachas, 3100 ligeras, 695 arietes
+    Distancia: 69.26 campos
+    Tiempo: 34:37:48
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:22:11
+
+  Ataque 2:
+    Desde: 499|545 (Palo de nata (499|545) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 8500 hachas, 3100 ligeras, 650 arietes
+    Distancia: 67.48 campos
+    Tiempo: 33:44:16
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 02:15:43
+
+  Ataque 3:
+    Desde: 477|535 ([Bej] (477|535) C54)
+    Jugador: m0bscene
+    Tipo: FULL
+    Tropas: 8842 hachas, 2967 ligeras, 600 arietes
+    Distancia: 58.69 campos
+    Tiempo: 29:20:49
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 06:39:10
+
+  Ataque 4:
+    Desde: 469|484 (ZzZ (469|484) C44)
+    Jugador: Jonax
+    Tipo: FULL
+    Tropas: 7490 hachas, 3398 ligeras, 500 arietes
+    Distancia: 22.8 campos
+    Tiempo: 11:24:06
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 00:35:53
+
+  Ataque 5:
+    Desde: 469|553 (Noble (469|553) C54)
+    Jugador: Juanm4
+    Tipo: FULL
+    Tropas: 6445 hachas, 3073 ligeras, 371 arietes
+    Distancia: 78.16 campos
+    Tiempo: 39:04:48
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 20:55:11
+
+
+================================================================================
+OBJETIVO #2: (C003) Sinceramente Sincero (491|477)
+Prioridad: 1 | Defensor: davidx
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 456|534 (Bollito exterminador (456|534) C54)
+    Jugador: Meliflua
+    Tipo: FULL
+    Tropas: 6282 hachas, 3078 ligeras, 457 arietes
+    Distancia: 66.89 campos
+    Tiempo: 33:26:38
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 02:33:21
+
+  Ataque 2:
+    Desde: 492|502 (Vae Victis 010 (492|502) C54)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 7500 hachas, 2650 ligeras, 493 arietes
+    Distancia: 25.02 campos
+    Tiempo: 12:30:35
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 23:29:24
+
+  Ataque 3:
+    Desde: 443|526 (001 (443|526) C54)
+    Jugador: Samutmt10
+    Tipo: FULL
+    Tropas: 7882 hachas, 3000 ligeras, 392 arietes
+    Distancia: 68.59 campos
+    Tiempo: 34:17:47
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:42:12
+
+  Ataque 4:
+    Desde: 459|518 (Fortaleza2 (459|518) C54)
+    Jugador: GeNgHi-kHaN
+    Tipo: FULL
+    Tropas: 4496 hachas, 4000 ligeras, 306 arietes
+    Distancia: 52.01 campos
+    Tiempo: 26:00:17
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 09:59:42
+
+  Ataque 5:
+    Desde: 464|550 ([001] Tominoplia (464|550) C54)
+    Jugador: Meliflua
+    Tipo: FULL
+    Tropas: 6138 hachas, 3068 ligeras, 449 arietes
+    Distancia: 77.83 campos
+    Tiempo: 38:54:59
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 21:05:00
+
+
+================================================================================
+OBJETIVO #3: (C010) Un Vecino Nuevo :P (492|477)
+Prioridad: 1 | Defensor: davidx
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 499|518 (Noble 003 (499|518) C54)
+    Jugador: Angel117
+    Tipo: FULL
+    Tropas: 6916 hachas, 2883 ligeras, 422 arietes
+    Distancia: 41.59 campos
+    Tiempo: 20:47:47
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 15:12:12
+
+  Ataque 2:
+    Desde: 489|505 (-010 ferbarom (489|505) C54)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 6121 hachas, 3215 ligeras, 533 arietes
+    Distancia: 28.16 campos
+    Tiempo: 14:04:48
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 21:55:11
+
+  Ataque 3:
+    Desde: 453|535 (Bollito Junior (453|535) C54)
+    Jugador: Meliflua
+    Tipo: FULL
+    Tropas: 6000 hachas, 3000 ligeras, 450 arietes
+    Distancia: 69.89 campos
+    Tiempo: 34:56:46
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:03:13
+
+  Ataque 4:
+    Desde: 495|511 (1-TT- (495|511) C54)
+    Jugador: lenttt
+    Tipo: FULL
+    Tropas: 7218 hachas, 2800 ligeras, 400 arietes
+    Distancia: 34.13 campos
+    Tiempo: 17:03:57
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 18:56:02
+
+  Ataque 5:
+    Desde: 496|519 (Noble 001 (496|519) C54)
+    Jugador: Angel117
+    Tipo: FULL
+    Tropas: 6172 hachas, 2851 ligeras, 493 arietes
+    Distancia: 42.19 campos
+    Tiempo: 21:05:42
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 14:54:17
+
+
+================================================================================
+OBJETIVO #4: AS-07 (491|476)
+Prioridad: 1 | Defensor: adexe90
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 469|511 (BollitoZzZ (469|511) C54)
+    Jugador: Inception
+    Tipo: FULL
+    Tropas: 6497 hachas, 2999 ligeras, 400 arietes
+    Distancia: 41.34 campos
+    Tiempo: 20:40:12
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 15:19:47
+
+  Ataque 2:
+    Desde: 494|515 (005 (494|515) C54)
+    Jugador: Lowasd
+    Tipo: FULL
+    Tropas: 6972 hachas, 2702 ligeras, 352 arietes
+    Distancia: 39.12 campos
+    Tiempo: 19:33:27
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 16:26:32
+
+  Ataque 3:
+    Desde: 489|515 (BoLLiTo 005 (489|515) C54)
+    Jugador: Landstom
+    Tipo: FULL
+    Tropas: 6487 hachas, 2897 ligeras, 357 arietes
+    Distancia: 39.05 campos
+    Tiempo: 19:31:32
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 16:28:27
+
+  Ataque 4:
+    Desde: 461|539 (Bollito guerrero (461|539) C54)
+    Jugador: Meliflua
+    Tipo: FULL
+    Tropas: 5997 hachas, 2823 ligeras, 450 arietes
+    Distancia: 69.78 campos
+    Tiempo: 34:53:20
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:06:39
+
+  Ataque 5:
+    Desde: 467|534 (pueblo de Demente (467|534) C54)
+    Jugador: Demente
+    Tipo: FULL
+    Tropas: 5757 hachas, 3000 ligeras, 329 arietes
+    Distancia: 62.77 campos
+    Tiempo: 31:23:04
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 04:36:55
+
+
+================================================================================
+OBJETIVO #5: (C001) Viva La Pepa (491|475)
+Prioridad: 1 | Defensor: davidx
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 471|541 (|| ~Bollo~ || Granjero Demente (471|541) C54)
+    Jugador: rabagalan73
+    Tipo: FULL
+    Tropas: 6077 hachas, 2800 ligeras, 391 arietes
+    Distancia: 68.96 campos
+    Tiempo: 34:28:54
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:31:05
+
+  Ataque 2:
+    Desde: 469|500 (BollitoZzZ (469|500) C54)
+    Jugador: Inception
+    Tipo: FULL
+    Tropas: 6264 hachas, 2942 ligeras, 400 arietes
+    Distancia: 33.3 campos
+    Tiempo: 16:39:02
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 19:20:57
+
+  Ataque 3:
+    Desde: 450|528 (Jan_001 (450|528) C54)
+    Jugador: Jandry4
+    Tipo: FULL
+    Tropas: 5982 hachas, 3048 ligeras, 400 arietes
+    Distancia: 67.01 campos
+    Tiempo: 33:30:13
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 02:29:46
+
+  Ataque 4:
+    Desde: 454|512 (004 Pueblo de bonificación (454|512) C54)
+    Jugador: -Xiki-
+    Tipo: FULL
+    Tropas: 6500 hachas, 3138 ligeras, 375 arietes
+    Distancia: 52.33 campos
+    Tiempo: 26:09:46
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 09:50:13
+
+  Ataque 5:
+    Desde: 434|564 (01 - Monkey D Luffy (434|564) C54)
+    Jugador: itachi77
+    Tipo: FULL
+    Tropas: 6056 hachas, 3099 ligeras, 399 arietes
+    Distancia: 105.69 campos
+    Tiempo: 52:50:38
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 07:09:21
+
+
+================================================================================
+OBJETIVO #6: 007 (491|474)
+Prioridad: 1 | Defensor: Reddas
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 482|527 (003-Moyete (482|527) C54)
+    Jugador: moyete
+    Tipo: FULL
+    Tropas: 5152 hachas, 3234 ligeras, 447 arietes
+    Distancia: 53.76 campos
+    Tiempo: 26:52:45
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 09:07:14
+
+  Ataque 2:
+    Desde: 463|524 (ZzZ (463|524) C54)
+    Jugador: Jonax
+    Tipo: FULL
+    Tropas: 6048 hachas, 2700 ligeras, 350 arietes
+    Distancia: 57.31 campos
+    Tiempo: 28:39:11
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 07:20:48
+
+  Ataque 3:
+    Desde: 466|491 (ZzZ (466|491) C44)
+    Jugador: Jonax
+    Tipo: FULL
+    Tropas: 6048 hachas, 2700 ligeras, 348 arietes
+    Distancia: 30.23 campos
+    Tiempo: 15:06:58
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 20:53:01
+
+  Ataque 4:
+    Desde: 467|519 (ZzZ (467|519) C54)
+    Jugador: Jonax
+    Tipo: FULL
+    Tropas: 6048 hachas, 2700 ligeras, 343 arietes
+    Distancia: 51.0 campos
+    Tiempo: 25:30:00
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 10:30:00
+
+  Ataque 5:
+    Desde: 492|515 (1-TTT- (492|515) C54)
+    Jugador: lenttt
+    Tipo: FULL
+    Tropas: 6356 hachas, 2800 ligeras, 397 arietes
+    Distancia: 41.01 campos
+    Tiempo: 20:30:21
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 15:29:38
+
+
+================================================================================
+OBJETIVO #7: (C005) La Bomba Atomica (490|475)
+Prioridad: 1 | Defensor: davidx
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 490|514 (|| ~Bollo~ || Saly Bollo Oscuro (490|514) C54)
+    Jugador: rabagalan73
+    Tipo: FULL
+    Tropas: 6296 hachas, 2640 ligeras, 352 arietes
+    Distancia: 39.0 campos
+    Tiempo: 19:30:00
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 16:30:00
+
+  Ataque 2:
+    Desde: 453|560 (019 eNaSnI? (453|560) C54)
+    Jugador: Opsora
+    Tipo: FULL
+    Tropas: 5994 hachas, 3238 ligeras, 245 arietes
+    Distancia: 92.7 campos
+    Tiempo: 46:21:06
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 13:38:53
+
+  Ataque 3:
+    Desde: 488|489 (Bull bollo (488|489) C44)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2750 ligeras, 445 arietes
+    Distancia: 14.14 campos
+    Tiempo: 07:04:15
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 04:55:44
+
+  Ataque 4:
+    Desde: 489|532 (Bolli (489|532) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6002 hachas, 2729 ligeras, 445 arietes
+    Distancia: 57.01 campos
+    Tiempo: 28:30:15
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 07:29:44
+
+  Ataque 5:
+    Desde: 456|557 (010 eNaSnI? (456|557) C54)
+    Jugador: Opsora
+    Tipo: FULL
+    Tropas: 5995 hachas, 3202 ligeras, 240 arietes
+    Distancia: 88.77 campos
+    Tiempo: 44:23:04
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 15:36:55
+
+
+================================================================================
+OBJETIVO #8: 014 (489|474)
+Prioridad: 1 | Defensor: Kakatua
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 465|500 (ZzZ (465|500) C54)
+    Jugador: Jonax
+    Tipo: FULL
+    Tropas: 6048 hachas, 2700 ligeras, 327 arietes
+    Distancia: 35.38 campos
+    Tiempo: 17:41:30
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 18:18:29
+
+  Ataque 2:
+    Desde: 454|579 (Villa Viciosa (454|579) C54)
+    Jugador: samuel 003
+    Tipo: FULL
+    Tropas: 6024 hachas, 2771 ligeras, 422 arietes
+    Distancia: 110.68 campos
+    Tiempo: 55:20:23
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 04:39:36
+
+  Ataque 3:
+    Desde: 480|519 (001 (480|519) C54)
+    Jugador: Cerdo
+    Tipo: FULL
+    Tropas: 4614 hachas, 3025 ligeras, 433 arietes
+    Distancia: 45.89 campos
+    Tiempo: 22:56:44
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 13:03:15
+
+  Ataque 4:
+    Desde: 471|550 (|| ~Bollo~ || Rosadito (471|550) C54)
+    Jugador: rabagalan73
+    Tipo: FULL
+    Tropas: 5977 hachas, 2500 ligeras, 364 arietes
+    Distancia: 78.1 campos
+    Tiempo: 39:03:04
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 20:56:55
+
+  Ataque 5:
+    Desde: 468|540 (|| ~Bollo~ || Samu Dinamita (468|540) C54)
+    Jugador: rabagalan73
+    Tipo: FULL
+    Tropas: 5933 hachas, 2581 ligeras, 406 arietes
+    Distancia: 69.26 campos
+    Tiempo: 34:37:48
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:22:11
+
+
+================================================================================
+OBJETIVO #9: Sueños 010 (487|473)
+Prioridad: 1 | Defensor: Dornroschen
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 492|524 (001 (492|524) C54)
+    Jugador: Lowasd
+    Tipo: FULL
+    Tropas: 6197 hachas, 2490 ligeras, 435 arietes
+    Distancia: 51.24 campos
+    Tiempo: 25:37:20
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 10:22:39
+
+  Ataque 2:
+    Desde: 499|527 (007 (499|527) C54)
+    Jugador: Vakna
+    Tipo: FULL
+    Tropas: 6298 hachas, 2500 ligeras, 410 arietes
+    Distancia: 55.32 campos
+    Tiempo: 27:39:31
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 08:20:28
+
+  Ataque 3:
+    Desde: 499|521 (Noble 005 (499|521) C54)
+    Jugador: Angel117
+    Tipo: FULL
+    Tropas: 6222 hachas, 2630 ligeras, 316 arietes
+    Distancia: 49.48 campos
+    Tiempo: 24:44:19
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 11:15:40
+
+  Ataque 4:
+    Desde: 470|543 (Barryles (470|543) C54)
+    Jugador: Demente
+    Tipo: FULL
+    Tropas: 5498 hachas, 3000 ligeras, 330 arietes
+    Distancia: 72.03 campos
+    Tiempo: 36:01:02
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 23:58:57
+
+  Ataque 5:
+    Desde: 472|547 (TORINO (472|547) C54)
+    Jugador: Demente
+    Tipo: FULL
+    Tropas: 5500 hachas, 3000 ligeras, 325 arietes
+    Distancia: 75.5 campos
+    Tiempo: 37:45:08
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 22:14:51
+
+
+================================================================================
+OBJETIVO #10: AS-04 (487|476)
+Prioridad: 1 | Defensor: adexe90
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 484|523 (001 (484|523) C54)
+    Jugador: Vakna
+    Tipo: FULL
+    Tropas: 6327 hachas, 2500 ligeras, 412 arietes
+    Distancia: 47.1 campos
+    Tiempo: 23:32:52
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 12:27:07
+
+  Ataque 2:
+    Desde: 476|493 (BoLLiTo 014 (476|493) C44)
+    Jugador: Landstom
+    Tipo: FULL
+    Tropas: 5567 hachas, 2694 ligeras, 350 arietes
+    Distancia: 20.25 campos
+    Tiempo: 10:07:27
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 01:52:32
+
+  Ataque 3:
+    Desde: 456|544 (Bollito glotón (456|544) C54)
+    Jugador: Meliflua
+    Tipo: FULL
+    Tropas: 5695 hachas, 2619 ligeras, 427 arietes
+    Distancia: 74.73 campos
+    Tiempo: 37:21:59
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 22:38:00
+
+  Ataque 4:
+    Desde: 457|522 (ZzZ (457|522) C54)
+    Jugador: Jonax
+    Tipo: FULL
+    Tropas: 6048 hachas, 2700 ligeras, 275 arietes
+    Distancia: 54.92 campos
+    Tiempo: 27:27:32
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 08:32:27
+
+  Ataque 5:
+    Desde: 476|519 (pueblo de Pirate King (476|519) C54)
+    Jugador: Pirate King
+    Tipo: FULL
+    Tropas: 5528 hachas, 3221 ligeras, 222 arietes
+    Distancia: 44.38 campos
+    Tiempo: 22:11:32
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 13:48:27
+
+
+================================================================================
+OBJETIVO #11: AS-08 (487|477)
+Prioridad: 1 | Defensor: adexe90
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 482|512 (BoLLiTo 007 (482|512) C54)
+    Jugador: Landstom
+    Tipo: FULL
+    Tropas: 5850 hachas, 2673 ligeras, 350 arietes
+    Distancia: 35.36 campos
+    Tiempo: 17:40:39
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 18:19:20
+
+  Ataque 2:
+    Desde: 495|526 (004 (495|526) C54)
+    Jugador: Lowasd
+    Tipo: FULL
+    Tropas: 5587 hachas, 2529 ligeras, 411 arietes
+    Distancia: 49.65 campos
+    Tiempo: 24:49:27
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 11:10:32
+
+  Ataque 3:
+    Desde: 443|538 (Bollito de canela. (443|538) C54)
+    Jugador: Merett
+    Tipo: FULL
+    Tropas: 5211 hachas, 3136 ligeras, 349 arietes
+    Distancia: 75.21 campos
+    Tiempo: 37:36:23
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 22:23:36
+
+  Ataque 4:
+    Desde: 455|508 (ZzZ 1 (455|508) C54)
+    Jugador: rosado49
+    Tipo: FULL
+    Tropas: 5463 hachas, 2750 ligeras, 442 arietes
+    Distancia: 44.55 campos
+    Tiempo: 22:16:36
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 13:43:23
+
+  Ataque 5:
+    Desde: 491|516 (1-TTTTT- (491|516) C54)
+    Jugador: lenttt
+    Tipo: FULL
+    Tropas: 6085 hachas, 2632 ligeras, 327 arietes
+    Distancia: 39.2 campos
+    Tiempo: 19:36:08
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 16:23:51
+
+
+================================================================================
+OBJETIVO #12: 018 (483|477)
+Prioridad: 1 | Defensor: Kakatua
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 496|507 (Vae Victis 002 (496|507) C54)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5600 hachas, 2693 ligeras, 393 arietes
+    Distancia: 32.7 campos
+    Tiempo: 16:20:52
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 19:39:07
+
+  Ataque 2:
+    Desde: 502|484 (Vae Victis 071 (502|484) C45)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5600 hachas, 2650 ligeras, 400 arietes
+    Distancia: 20.25 campos
+    Tiempo: 10:07:27
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 01:52:32
+
+  Ataque 3:
+    Desde: 483|496 (Vae Victis 021 (483|496) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5600 hachas, 2650 ligeras, 398 arietes
+    Distancia: 19.0 campos
+    Tiempo: 09:30:00
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 02:30:00
+
+  Ataque 4:
+    Desde: 494|494 (Vae Victis 028 (494|494) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5600 hachas, 2650 ligeras, 398 arietes
+    Distancia: 20.25 campos
+    Tiempo: 10:07:27
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 01:52:32
+
+  Ataque 5:
+    Desde: 441|552 (022 eNaSnI? (441|552) C54)
+    Jugador: Opsora
+    Tipo: FULL
+    Tropas: 5418 hachas, 3211 ligeras, 245 arietes
+    Distancia: 85.96 campos
+    Tiempo: 42:58:46
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 17:01:13
+
+
+================================================================================
+OBJETIVO #13: 010 (482|477)
+Prioridad: 1 | Defensor: Kakatua
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 496|505 (Vae Victis 006 (496|505) C54)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5600 hachas, 2650 ligeras, 393 arietes
+    Distancia: 31.3 campos
+    Tiempo: 15:39:08
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 20:20:51
+
+  Ataque 2:
+    Desde: 496|497 (Vae Victis 019 (496|497) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5600 hachas, 2650 ligeras, 390 arietes
+    Distancia: 24.41 campos
+    Tiempo: 12:12:23
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 23:47:36
+
+  Ataque 3:
+    Desde: 495|508 (Vae Victis 001 (495|508) C54)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5600 hachas, 2638 ligeras, 392 arietes
+    Distancia: 33.62 campos
+    Tiempo: 16:48:27
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 19:11:32
+
+  Ataque 4:
+    Desde: 498|484 (Vae Victis 052 (498|484) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5535 hachas, 2634 ligeras, 381 arietes
+    Distancia: 17.46 campos
+    Tiempo: 08:43:55
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 03:16:04
+
+  Ataque 5:
+    Desde: 485|531 (|| ~Bollo~ || Tu Rey Bollo (485|531) C54)
+    Jugador: rabagalan73
+    Tipo: FULL
+    Tropas: 5544 hachas, 2500 ligeras, 348 arietes
+    Distancia: 54.08 campos
+    Tiempo: 27:02:29
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 08:57:30
+
+
+================================================================================
+OBJETIVO #14: 020 (482|475)
+Prioridad: 1 | Defensor: Kakatua
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 491|501 (015 ferbarom (491|501) C54)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 5000 hachas, 3000 ligeras, 400 arietes
+    Distancia: 27.51 campos
+    Tiempo: 13:45:24
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 22:14:35
+
+  Ataque 2:
+    Desde: 439|514 (014 (439|514) C54)
+    Jugador: Samutmt10
+    Tipo: FULL
+    Tropas: 6963 hachas, 2500 ligeras, 390 arietes
+    Distancia: 58.05 campos
+    Tiempo: 29:01:33
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 06:58:26
+
+  Ataque 3:
+    Desde: 489|526 (001 Payet (489|526) C54)
+    Jugador: ElPayet
+    Tipo: FULL
+    Tropas: 5099 hachas, 2750 ligeras, 298 arietes
+    Distancia: 51.48 campos
+    Tiempo: 25:44:20
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 10:15:39
+
+  Ataque 4:
+    Desde: 487|499 (016 ferbarom (487|499) C44)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 5000 hachas, 3000 ligeras, 400 arietes
+    Distancia: 24.52 campos
+    Tiempo: 12:15:27
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 23:44:32
+
+  Ataque 5:
+    Desde: 479|504 (001 ferbarom (479|504) C54)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 5000 hachas, 2858 ligeras, 400 arietes
+    Distancia: 29.15 campos
+    Tiempo: 14:34:38
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 21:25:21
+
+
+================================================================================
+OBJETIVO #15: La granja de adexe (482|471)
+Prioridad: 1 | Defensor: Thanks.es
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 440|520 (008 (440|520) C54)
+    Jugador: Samutmt10
+    Tipo: FULL
+    Tropas: 6779 hachas, 2500 ligeras, 392 arietes
+    Distancia: 64.54 campos
+    Tiempo: 32:16:06
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 03:43:53
+
+  Ataque 2:
+    Desde: 437|512 (015 (437|512) C54)
+    Jugador: Samutmt10
+    Tipo: FULL
+    Tropas: 6901 hachas, 2458 ligeras, 383 arietes
+    Distancia: 60.88 campos
+    Tiempo: 30:26:18
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 05:33:41
+
+  Ataque 3:
+    Desde: 480|541 ([Low] (480|541) C54)
+    Jugador: m0bscene
+    Tipo: FULL
+    Tropas: 5759 hachas, 2362 ligeras, 440 arietes
+    Distancia: 70.03 campos
+    Tiempo: 35:00:51
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 00:59:08
+
+  Ataque 4:
+    Desde: 474|536 (Noble (474|536) C54)
+    Jugador: Juanm4
+    Tipo: FULL
+    Tropas: 5413 hachas, 2684 ligeras, 241 arietes
+    Distancia: 65.49 campos
+    Tiempo: 32:44:42
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 03:15:17
+
+  Ataque 5:
+    Desde: 477|487 (ZzZ (477|487) C44)
+    Jugador: Inception
+    Tipo: FULL
+    Tropas: 5498 hachas, 2632 ligeras, 370 arietes
+    Distancia: 16.76 campos
+    Tiempo: 08:22:53
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 03:37:06
+
+
+================================================================================
+OBJETIVO #16: 020 Brunn an der Schneebergbahn (476|474)
+Prioridad: 1 | Defensor: Theodorburg
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 484|535 (Filipinos (484|535) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6002 hachas, 2650 ligeras, 445 arietes
+    Distancia: 61.52 campos
+    Tiempo: 30:45:40
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 05:14:19
+
+  Ataque 2:
+    Desde: 488|488 (Bull bollo (488|488) C44)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2700 ligeras, 400 arietes
+    Distancia: 18.44 campos
+    Tiempo: 09:13:10
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 02:46:49
+
+  Ataque 3:
+    Desde: 488|484 (Bull bollo (488|484) C44)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2699 ligeras, 450 arietes
+    Distancia: 15.62 campos
+    Tiempo: 07:48:36
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 04:11:23
+
+  Ataque 4:
+    Desde: 491|543 (Mazapan (491|543) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 5816 hachas, 2700 ligeras, 319 arietes
+    Distancia: 70.61 campos
+    Tiempo: 35:18:20
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 00:41:39
+
+  Ataque 5:
+    Desde: 493|537 (Donut (493|537) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6001 hachas, 2650 ligeras, 400 arietes
+    Distancia: 65.25 campos
+    Tiempo: 32:37:36
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 03:22:23
+
+
+================================================================================
+OBJETIVO #17: 20 Semi-Afk (472|479)
+Prioridad: 1 | Defensor: Übel
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 484|507 (011 ferbarom (484|507) C54)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 5000 hachas, 3000 ligeras, 400 arietes
+    Distancia: 30.46 campos
+    Tiempo: 15:13:53
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 20:46:06
+
+  Ataque 2:
+    Desde: 484|510 (014 ferbarom (484|510) C54)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 5000 hachas, 3000 ligeras, 400 arietes
+    Distancia: 33.24 campos
+    Tiempo: 16:37:14
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 19:22:45
+
+  Ataque 3:
+    Desde: 493|509 (018 ferbarom (493|509) C54)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 5000 hachas, 3000 ligeras, 400 arietes
+    Distancia: 36.62 campos
+    Tiempo: 18:18:35
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 17:41:24
+
+  Ataque 4:
+    Desde: 487|492 (Vae Victis 032 (487|492) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5205 hachas, 2521 ligeras, 355 arietes
+    Distancia: 19.85 campos
+    Tiempo: 09:55:28
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 02:04:31
+
+  Ataque 5:
+    Desde: 495|482 (Vae Victis 056 (495|482) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5230 hachas, 2447 ligeras, 395 arietes
+    Distancia: 23.19 campos
+    Tiempo: 11:35:50
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 00:24:09
+
+
+================================================================================
+OBJETIVO #18: 19 Semi-Afk (471|479)
+Prioridad: 1 | Defensor: Übel
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 492|522 (1-T- (492|522) C54)
+    Jugador: lenttt
+    Tipo: FULL
+    Tropas: 4368 hachas, 2800 ligeras, 343 arietes
+    Distancia: 47.85 campos
+    Tiempo: 23:55:37
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 12:04:22
+
+  Ataque 2:
+    Desde: 469|540 (012 (469|540) C54)
+    Jugador: pepenando
+    Tipo: FULL
+    Tropas: 5894 hachas, 2260 ligeras, 386 arietes
+    Distancia: 61.03 campos
+    Tiempo: 30:30:59
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 05:29:00
+
+  Ataque 3:
+    Desde: 494|491 (Vae Victis 039 (494|491) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5600 hachas, 2338 ligeras, 400 arietes
+    Distancia: 25.94 campos
+    Tiempo: 12:58:16
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 23:01:43
+
+  Ataque 4:
+    Desde: 474|534 ([Aub] (474|534) C54)
+    Jugador: m0bscene
+    Tipo: FULL
+    Tropas: 5938 hachas, 2508 ligeras, 439 arietes
+    Distancia: 55.08 campos
+    Tiempo: 27:32:27
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 08:27:32
+
+  Ataque 5:
+    Desde: 493|530 (006 Payet (493|530) C54)
+    Jugador: ElPayet
+    Tipo: FULL
+    Tropas: 5294 hachas, 2574 ligeras, 281 arietes
+    Distancia: 55.54 campos
+    Tiempo: 27:46:16
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 08:13:43
+
+
+================================================================================
+OBJETIVO #19: 005 Mr Nobody (472|470)
+Prioridad: 1 | Defensor: Mr Nobody
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 424|551 (000 (424|551) C54)
+    Jugador: Aubriel
+    Tipo: FULL
+    Tropas: 4642 hachas, 2087 ligeras, 400 arietes
+    Distancia: 94.15 campos
+    Tiempo: 47:04:37
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 12:55:22
+
+  Ataque 2:
+    Desde: 452|504 (ZzZ (452|504) C54)
+    Jugador: StormBreaker
+    Tipo: FULL
+    Tropas: 4526 hachas, 1962 ligeras, 380 arietes
+    Distancia: 39.45 campos
+    Tiempo: 19:43:23
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 16:16:36
+
+  Ataque 3:
+    Desde: 489|530 (006-Moyete (489|530) C54)
+    Jugador: moyete
+    Tipo: MEDIA
+    Tropas: 4612 hachas, 2387 ligeras, 356 arietes
+    Distancia: 62.36 campos
+    Tiempo: 31:10:51
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 04:49:08
+
+  Ataque 4:
+    Desde: 447|521 (ZzZ (447|521) C54)
+    Jugador: GalindoDev
+    Tipo: MEDIA
+    Tropas: 4790 hachas, 1800 ligeras, 400 arietes
+    Distancia: 56.8 campos
+    Tiempo: 28:23:56
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 07:36:03
+
+  Ataque 5:
+    Desde: 499|520 (007 (499|520) C54)
+    Jugador: Lowasd
+    Tipo: MEDIA
+    Tropas: 4363 hachas, 1768 ligeras, 364 arietes
+    Distancia: 56.82 campos
+    Tiempo: 28:24:43
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 07:35:16
+
+
+================================================================================
+OBJETIVO #20: 003 Mr Nobody (473|469)
+Prioridad: 1 | Defensor: Mr Nobody
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 501|484 (A003 (501|484) C45)
+    Jugador: Angel117
+    Tipo: MEDIA
+    Tropas: 4164 hachas, 2095 ligeras, 176 arietes
+    Distancia: 31.76 campos
+    Tiempo: 15:52:56
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 20:07:03
+
+  Ataque 2:
+    Desde: 473|491 (BoLLiTo 012 (473|491) C44)
+    Jugador: Landstom
+    Tipo: MEDIA
+    Tropas: 3811 hachas, 1756 ligeras, 350 arietes
+    Distancia: 22.0 campos
+    Tiempo: 11:00:00
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 01:00:00
+
+  Ataque 3:
+    Desde: 449|525 (Bollito NauST (449|525) C54)
+    Jugador: sirboston
+    Tipo: MEDIA
+    Tropas: 3809 hachas, 1876 ligeras, 222 arietes
+    Distancia: 60.93 campos
+    Tiempo: 30:27:47
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 05:32:12
+
+  Ataque 4:
+    Desde: 444|521 (ZzZ (444|521) C54)
+    Jugador: GalindoDev
+    Tipo: MEDIA
+    Tropas: 3766 hachas, 1505 ligeras, 373 arietes
+    Distancia: 59.54 campos
+    Tiempo: 29:46:11
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 06:13:48
+
+  Ataque 5:
+    Desde: 477|489 (BoLLiTo 022 (477|489) C44)
+    Jugador: Landstom
+    Tipo: MEDIA
+    Tropas: 3737 hachas, 1825 ligeras, 252 arietes
+    Distancia: 20.4 campos
+    Tiempo: 10:11:52
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 01:48:07
+
+
+================================================================================
+OBJETIVO #21: 023 13 (474|468)
+Prioridad: 1 | Defensor: Theodorburg
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 483|487 (Bull bollo (483|487) C44)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2643 ligeras, 400 arietes
+    Distancia: 21.02 campos
+    Tiempo: 10:30:42
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 01:29:17
+
+  Ataque 2:
+    Desde: 480|490 (Bull bollo (480|490) C44)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2650 ligeras, 450 arietes
+    Distancia: 22.8 campos
+    Tiempo: 11:24:06
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 00:35:53
+
+  Ataque 3:
+    Desde: 489|534 (SS Sur (489|534) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2650 ligeras, 445 arietes
+    Distancia: 67.68 campos
+    Tiempo: 33:50:29
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 02:09:30
+
+  Ataque 4:
+    Desde: 489|536 (SS Sur (489|536) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2700 ligeras, 400 arietes
+    Distancia: 69.63 campos
+    Tiempo: 34:49:02
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:10:57
+
+  Ataque 5:
+    Desde: 498|530 (Tarta de queso (498|530) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2634 ligeras, 444 arietes
+    Distancia: 66.48 campos
+    Tiempo: 33:14:29
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 02:45:30
+
+
+================================================================================
+OBJETIVO #22: 004 Mr Nobody (475|469)
+Prioridad: 1 | Defensor: Mr Nobody
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 474|492 (BoLLiTo 009 (474|492) C44)
+    Jugador: Landstom
+    Tipo: MEDIA
+    Tropas: 3415 hachas, 1599 ligeras, 324 arietes
+    Distancia: 23.02 campos
+    Tiempo: 11:30:39
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 00:29:20
+
+  Ataque 2:
+    Desde: 491|524 (008 (491|524) C54)
+    Jugador: Lowasd
+    Tipo: MEDIA
+    Tropas: 3556 hachas, 1517 ligeras, 339 arietes
+    Distancia: 57.28 campos
+    Tiempo: 28:38:24
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 07:21:35
+
+  Ataque 3:
+    Desde: 471|515 (006 (471|515) C54)
+    Jugador: pepenando
+    Tipo: MEDIA
+    Tropas: 5632 hachas, 1180 ligeras, 128 arietes
+    Distancia: 46.17 campos
+    Tiempo: 23:05:12
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 12:54:47
+
+  Ataque 4:
+    Desde: 445|518 (ZzZ (445|518) C54)
+    Jugador: GalindoDev
+    Tipo: MEDIA
+    Tropas: 3436 hachas, 1316 ligeras, 374 arietes
+    Distancia: 57.45 campos
+    Tiempo: 28:43:37
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 07:16:22
+
+  Ataque 5:
+    Desde: 457|538 (Bollito irascible (457|538) C54)
+    Jugador: Meliflua
+    Tipo: MEDIA
+    Tropas: 3890 hachas, 1615 ligeras, 315 arietes
+    Distancia: 71.31 campos
+    Tiempo: 35:39:16
+    Moral: 93%
+    ⏰ Enviar a las: 24/11/2025 00:20:43
+
+
+================================================================================
+OBJETIVO #23: 013 Burgruine Aggstein (476|469)
+Prioridad: 1 | Defensor: Theodorburg
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 496|539 (SS Sur (496|539) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2650 ligeras, 420 arietes
+    Distancia: 72.8 campos
+    Tiempo: 36:24:01
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 23:35:58
+
+  Ataque 2:
+    Desde: 483|482 (Bull bollo (483|482) C44)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2650 ligeras, 400 arietes
+    Distancia: 14.76 campos
+    Tiempo: 07:22:56
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 04:37:03
+
+  Ataque 3:
+    Desde: 486|488 (Bull bollo (486|488) C44)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2650 ligeras, 400 arietes
+    Distancia: 21.47 campos
+    Tiempo: 10:44:07
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 01:15:52
+
+  Ataque 4:
+    Desde: 492|537 (SS Sur (492|537) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 6000 hachas, 2650 ligeras, 400 arietes
+    Distancia: 69.86 campos
+    Tiempo: 34:55:42
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:04:17
+
+  Ataque 5:
+    Desde: 486|546 (SS Sur (486|546) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 5966 hachas, 2650 ligeras, 399 arietes
+    Distancia: 77.65 campos
+    Tiempo: 38:49:23
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 21:10:36
+
+
+================================================================================
+OBJETIVO #24: 21 Semi-Afk (475|470)
+Prioridad: 1 | Defensor: Übel
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 452|553 (042 eNaSnI? (452|553) C54)
+    Jugador: Opsora
+    Tipo: FULL
+    Tropas: 4783 hachas, 2968 ligeras, 245 arietes
+    Distancia: 86.13 campos
+    Tiempo: 43:03:50
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 16:56:09
+
+  Ataque 2:
+    Desde: 436|507 (016 (436|507) C54)
+    Jugador: Samutmt10
+    Tipo: FULL
+    Tropas: 5834 hachas, 2500 ligeras, 400 arietes
+    Distancia: 53.76 campos
+    Tiempo: 26:52:45
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 09:07:14
+
+  Ataque 3:
+    Desde: 454|556 (018 eNaSnI? (454|556) C54)
+    Jugador: Opsora
+    Tipo: FULL
+    Tropas: 4589 hachas, 2432 ligeras, 238 arietes
+    Distancia: 88.53 campos
+    Tiempo: 44:15:48
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 15:44:11
+
+  Ataque 4:
+    Desde: 499|480 (Vae Victis 060 (499|480) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5321 hachas, 2279 ligeras, 400 arietes
+    Distancia: 26.0 campos
+    Tiempo: 13:00:00
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 23:00:00
+
+  Ataque 5:
+    Desde: 501|495 (Vae Victis 062 (501|495) C45)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 6031 hachas, 2143 ligeras, 402 arietes
+    Distancia: 36.07 campos
+    Tiempo: 18:02:04
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 17:57:55
+
+
+================================================================================
+OBJETIVO #25: 024 13 (476|470)
+Prioridad: 1 | Defensor: Theodorburg
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 490|542 (SS Sur (490|542) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 5563 hachas, 2650 ligeras, 395 arietes
+    Distancia: 73.35 campos
+    Tiempo: 36:40:27
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 23:19:32
+
+  Ataque 2:
+    Desde: 488|548 (Cuscus (488|548) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 5337 hachas, 2585 ligeras, 445 arietes
+    Distancia: 78.92 campos
+    Tiempo: 39:27:31
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 20:32:28
+
+  Ataque 3:
+    Desde: 485|482 (Bull bollo (485|482) C44)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 5854 hachas, 2585 ligeras, 390 arietes
+    Distancia: 15.0 campos
+    Tiempo: 07:30:00
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 04:30:00
+
+  Ataque 4:
+    Desde: 488|536 (Napolitana (488|536) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 5001 hachas, 2418 ligeras, 427 arietes
+    Distancia: 67.08 campos
+    Tiempo: 33:32:27
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 02:27:32
+
+  Ataque 5:
+    Desde: 465|550 (040 eNaSnI? (465|550) C54)
+    Jugador: Opsora
+    Tipo: FULL
+    Tropas: 5231 hachas, 2806 ligeras, 245 arietes
+    Distancia: 80.75 campos
+    Tiempo: 40:22:34
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 19:37:25
+
+
+================================================================================
+OBJETIVO #26: 012 (477|471)
+Prioridad: 1 | Defensor: Kakatua
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 471|504 (008 ferbarom (471|504) C54)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 4753 hachas, 2807 ligeras, 400 arietes
+    Distancia: 33.54 campos
+    Tiempo: 16:46:13
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 19:13:46
+
+  Ataque 2:
+    Desde: 493|494 (Vae Victis 027 (493|494) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5600 hachas, 2209 ligeras, 400 arietes
+    Distancia: 28.02 campos
+    Tiempo: 14:00:32
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 21:59:27
+
+  Ataque 3:
+    Desde: 479|531 (|| ~Bollo~ || Bull2ser (479|531) C54)
+    Jugador: rabagalan73
+    Tipo: FULL
+    Tropas: 5103 hachas, 2155 ligeras, 400 arietes
+    Distancia: 60.03 campos
+    Tiempo: 30:00:59
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 05:59:00
+
+  Ataque 4:
+    Desde: 475|498 (BollitoZzZ (475|498) C44)
+    Jugador: Inception
+    Tipo: FULL
+    Tropas: 4127 hachas, 2801 ligeras, 363 arietes
+    Distancia: 27.07 campos
+    Tiempo: 13:32:13
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 22:27:46
+
+  Ataque 5:
+    Desde: 422|526 (101 Pueblo de bonificación (422|526) C54)
+    Jugador: -Xiki-
+    Tipo: FULL
+    Tropas: 5387 hachas, 2585 ligeras, 370 arietes
+    Distancia: 77.78 campos
+    Tiempo: 38:53:27
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 21:06:32
+
+
+================================================================================
+OBJETIVO #27: 011 (478|471)
+Prioridad: 1 | Defensor: Kakatua
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 456|517 (ZzZ (456|517) C54)
+    Jugador: Jonax
+    Tipo: FULL
+    Tropas: 5073 hachas, 2526 ligeras, 240 arietes
+    Distancia: 50.99 campos
+    Tiempo: 25:29:42
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 10:30:17
+
+  Ataque 2:
+    Desde: 488|518 (007 Payet (488|518) C54)
+    Jugador: ElPayet
+    Tipo: FULL
+    Tropas: 4356 hachas, 2612 ligeras, 289 arietes
+    Distancia: 48.05 campos
+    Tiempo: 24:01:33
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 11:58:26
+
+  Ataque 3:
+    Desde: 477|506 (021 ferbarom (477|506) C54)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 5000 hachas, 2667 ligeras, 400 arietes
+    Distancia: 35.01 campos
+    Tiempo: 17:30:25
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 18:29:34
+
+  Ataque 4:
+    Desde: 465|551 (037 eNaSnI? (465|551) C54)
+    Jugador: Opsora
+    Tipo: FULL
+    Tropas: 4135 hachas, 2949 ligeras, 232 arietes
+    Distancia: 81.05 campos
+    Tiempo: 40:31:28
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 19:28:31
+
+  Ataque 5:
+    Desde: 471|546 (Aiwarin - Maeveeka (471|546) C54)
+    Jugador: Demente
+    Tipo: FULL
+    Tropas: 5119 hachas, 2562 ligeras, 329 arietes
+    Distancia: 75.33 campos
+    Tiempo: 37:39:46
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 22:20:13
+
+
+================================================================================
+OBJETIVO #28: 015 (479|471)
+Prioridad: 1 | Defensor: Kakatua
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 496|487 (Vae Victis 046 (496|487) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5083 hachas, 2169 ligeras, 452 arietes
+    Distancia: 23.35 campos
+    Tiempo: 11:40:21
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 00:19:38
+
+  Ataque 2:
+    Desde: 479|543 ([Jox] (479|543) C54)
+    Jugador: m0bscene
+    Tipo: FULL
+    Tropas: 4892 hachas, 2326 ligeras, 359 arietes
+    Distancia: 72.0 campos
+    Tiempo: 36:00:00
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 00:00:00
+
+  Ataque 3:
+    Desde: 460|520 (ZzZ (460|520) C54)
+    Jugador: Jonax
+    Tipo: FULL
+    Tropas: 4734 hachas, 2556 ligeras, 357 arietes
+    Distancia: 52.55 campos
+    Tiempo: 26:16:38
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 09:43:21
+
+  Ataque 4:
+    Desde: 490|477 (Vae Victis 073 (490|477) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5413 hachas, 2081 ligeras, 400 arietes
+    Distancia: 12.53 campos
+    Tiempo: 06:15:53
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 05:44:06
+
+  Ataque 5:
+    Desde: 438|518 (033 (438|518) C54)
+    Jugador: Samutmt10
+    Tipo: FULL
+    Tropas: 5050 hachas, 2500 ligeras, 377 arietes
+    Distancia: 62.37 campos
+    Tiempo: 31:11:05
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 04:48:54
+
+
+================================================================================
+OBJETIVO #29: Sueños 014 (493|477)
+Prioridad: 1 | Defensor: Dornroschen
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 479|539 (Noble (479|539) C54)
+    Jugador: Juanm4
+    Tipo: FULL
+    Tropas: 4553 hachas, 2264 ligeras, 308 arietes
+    Distancia: 63.56 campos
+    Tiempo: 31:46:49
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 04:13:10
+
+  Ataque 2:
+    Desde: 438|519 (006 Chocolate un lunes (438|519) C54)
+    Jugador: -Xiki-
+    Tipo: FULL
+    Tropas: 4943 hachas, 2541 ligeras, 299 arietes
+    Distancia: 69.2 campos
+    Tiempo: 34:36:04
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:23:55
+
+  Ataque 3:
+    Desde: 466|532 (027 de casrocaravia con amor (466|532) C54)
+    Jugador: pikeras
+    Tipo: FULL
+    Tropas: 4446 hachas, 2368 ligeras, 397 arietes
+    Distancia: 61.27 campos
+    Tiempo: 30:38:05
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 05:21:54
+
+  Ataque 4:
+    Desde: 465|528 (pueblo de abandonando (465|528) C54)
+    Jugador: Demente
+    Tipo: FULL
+    Tropas: 4661 hachas, 2393 ligeras, 266 arietes
+    Distancia: 58.18 campos
+    Tiempo: 29:05:25
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 06:54:34
+
+  Ataque 5:
+    Desde: 476|546 (Noble (476|546) C54)
+    Jugador: Juanm4
+    Tipo: FULL
+    Tropas: 4300 hachas, 2061 ligeras, 358 arietes
+    Distancia: 71.06 campos
+    Tiempo: 35:31:54
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 00:28:05
+
+
+================================================================================
+OBJETIVO #30: (C006) Agua Ardiente (493|475)
+Prioridad: 1 | Defensor: davidx
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 488|545 (SS Sur (488|545) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 4038 hachas, 2650 ligeras, 450 arietes
+    Distancia: 70.18 campos
+    Tiempo: 35:05:21
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 00:54:38
+
+  Ataque 2:
+    Desde: 464|522 (ZzZ (464|522) C54)
+    Jugador: Jonax
+    Tipo: FULL
+    Tropas: 5130 hachas, 2372 ligeras, 233 arietes
+    Distancia: 55.23 campos
+    Tiempo: 27:36:48
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 08:23:11
+
+  Ataque 3:
+    Desde: 486|541 (Pantera rosa (486|541) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 4872 hachas, 2185 ligeras, 260 arietes
+    Distancia: 66.37 campos
+    Tiempo: 33:11:06
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 02:48:53
+
+  Ataque 4:
+    Desde: 459|521 (ZzZ (459|521) C54)
+    Jugador: Jonax
+    Tipo: FULL
+    Tropas: 4523 hachas, 2566 ligeras, 224 arietes
+    Distancia: 57.2 campos
+    Tiempo: 28:36:02
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 07:23:57
+
+  Ataque 5:
+    Desde: 495|494 (Vae Victis 029 (495|494) C44)
+    Jugador: BullDozer
+    Tipo: FULL
+    Tropas: 5540 hachas, 1992 ligeras, 389 arietes
+    Distancia: 19.1 campos
+    Tiempo: 09:33:08
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 02:26:51
+
+
+================================================================================
+OBJETIVO #31: 003 Orden-Presagio 001 (492|475)
+Prioridad: 1 | Defensor: laucharo
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 448|506 (009 Bollito Crudo (448|506) C54)
+    Jugador: -Xiki-
+    Tipo: MEDIA
+    Tropas: 4794 hachas, 2275 ligeras, 299 arietes
+    Distancia: 53.82 campos
+    Tiempo: 26:54:42
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 09:05:17
+
+  Ataque 2:
+    Desde: 448|510 (bollito Crudo (448|510) C54)
+    Jugador: -Xiki-
+    Tipo: MEDIA
+    Tropas: 4729 hachas, 2249 ligeras, 311 arietes
+    Distancia: 56.22 campos
+    Tiempo: 28:06:40
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 07:53:19
+
+  Ataque 3:
+    Desde: 462|542 (Bollito exasperado (462|542) C54)
+    Jugador: Meliflua
+    Tipo: MEDIA
+    Tropas: 4616 hachas, 2014 ligeras, 289 arietes
+    Distancia: 73.41 campos
+    Tiempo: 36:42:17
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 23:17:42
+
+  Ataque 4:
+    Desde: 447|517 (es95 (447|517) C54)
+    Jugador: -Xiki-
+    Tipo: MEDIA
+    Tropas: 4177 hachas, 2237 ligeras, 370 arietes
+    Distancia: 61.55 campos
+    Tiempo: 30:46:38
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 05:13:21
+
+  Ataque 5:
+    Desde: 480|521 (008 (480|521) C54)
+    Jugador: Vakna
+    Tipo: MEDIA
+    Tropas: 4118 hachas, 2263 ligeras, 0 arietes
+    Distancia: 47.54 campos
+    Tiempo: 23:46:11
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 12:13:48
+
+
+================================================================================
+OBJETIVO #32: Farmer dormilona (498|477)
+Prioridad: 1 | Defensor: lukareli
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 445|529 (006 (445|529) C54)
+    Jugador: Samutmt10
+    Tipo: FULL
+    Tropas: 5413 hachas, 2314 ligeras, 394 arietes
+    Distancia: 74.25 campos
+    Tiempo: 37:07:29
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 22:52:30
+
+  Ataque 2:
+    Desde: 454|558 (023 eNaSnI? (454|558) C54)
+    Jugador: Opsora
+    Tipo: FULL
+    Tropas: 4904 hachas, 2602 ligeras, 243 arietes
+    Distancia: 92.18 campos
+    Tiempo: 46:05:22
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 13:54:37
+
+  Ataque 3:
+    Desde: 440|519 (009 (440|519) C54)
+    Jugador: Samutmt10
+    Tipo: FULL
+    Tropas: 5326 hachas, 2311 ligeras, 400 arietes
+    Distancia: 71.61 campos
+    Tiempo: 35:48:18
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 00:11:41
+
+  Ataque 4:
+    Desde: 483|500 (-058 ferbarom (483|500) C54)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 3844 hachas, 2694 ligeras, 400 arietes
+    Distancia: 27.46 campos
+    Tiempo: 13:43:46
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 22:16:13
+
+  Ataque 5:
+    Desde: 467|549 (046 eNaSnI? (467|549) C54)
+    Jugador: Opsora
+    Tipo: FULL
+    Tropas: 4258 hachas, 2660 ligeras, 245 arietes
+    Distancia: 78.39 campos
+    Tiempo: 39:11:42
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 20:48:17
+
+
+================================================================================
+OBJETIVO #33: Lloralo Kuka (498|478)
+Prioridad: 1 | Defensor: Sr.Farmer
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 478|550 ([Fer] (478|550) C54)
+    Jugador: m0bscene
+    Tipo: FULL
+    Tropas: 4700 hachas, 2028 ligeras, 370 arietes
+    Distancia: 74.73 campos
+    Tiempo: 37:21:47
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 22:38:12
+
+  Ataque 2:
+    Desde: 478|548 ([Ros] (478|548) C54)
+    Jugador: m0bscene
+    Tipo: MEDIA
+    Tropas: 3780 hachas, 2550 ligeras, 301 arietes
+    Distancia: 72.8 campos
+    Tiempo: 36:24:01
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 23:35:58
+
+  Ataque 3:
+    Desde: 479|488 (ZzZ (479|488) C44)
+    Jugador: Inception
+    Tipo: MEDIA
+    Tropas: 4945 hachas, 2251 ligeras, 243 arietes
+    Distancia: 21.47 campos
+    Tiempo: 10:44:07
+    Moral: 100%
+    ⏰ Enviar a las: 25/11/2025 01:15:52
+
+  Ataque 4:
+    Desde: 475|485 (ZzZ (475|485) C44)
+    Jugador: Inception
+    Tipo: MEDIA
+    Tropas: 4325 hachas, 2072 ligeras, 400 arietes
+    Distancia: 24.04 campos
+    Tiempo: 12:01:14
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 23:58:45
+
+  Ataque 5:
+    Desde: 477|542 (Noble (477|542) C54)
+    Jugador: Juanm4
+    Tipo: MEDIA
+    Tropas: 4190 hachas, 2078 ligeras, 287 arietes
+    Distancia: 67.36 campos
+    Tiempo: 33:40:43
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 02:19:16
+
+
+================================================================================
+OBJETIVO #34: 008 (499|475)
+Prioridad: 1 | Defensor: Reddas
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 488|524 (003 Payet (488|524) C54)
+    Jugador: ElPayet
+    Tipo: FULL
+    Tropas: 3998 hachas, 2374 ligeras, 289 arietes
+    Distancia: 50.22 campos
+    Tiempo: 25:06:35
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 10:53:24
+
+  Ataque 2:
+    Desde: 445|524 (052 (445|524) C54)
+    Jugador: Samutmt10
+    Tipo: MEDIA
+    Tropas: 4845 hachas, 2070 ligeras, 400 arietes
+    Distancia: 72.92 campos
+    Tiempo: 36:27:31
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 23:32:28
+
+  Ataque 3:
+    Desde: 473|496 (BollitoZzZ (473|496) C44)
+    Jugador: Inception
+    Tipo: MEDIA
+    Tropas: 4191 hachas, 2071 ligeras, 380 arietes
+    Distancia: 33.42 campos
+    Tiempo: 16:42:38
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 19:17:21
+
+  Ataque 4:
+    Desde: 480|551 ([Xik] (480|551) C54)
+    Jugador: m0bscene
+    Tipo: MEDIA
+    Tropas: 4158 hachas, 1871 ligeras, 455 arietes
+    Distancia: 78.34 campos
+    Tiempo: 39:10:10
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 20:49:49
+
+  Ataque 5:
+    Desde: 454|522 (ZzZ (454|522) C54)
+    Jugador: Jonax
+    Tipo: MEDIA
+    Tropas: 4080 hachas, 2117 ligeras, 229 arietes
+    Distancia: 65.07 campos
+    Tiempo: 32:32:04
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 03:27:55
+
+
+================================================================================
+OBJETIVO #35: Buldo (500|474)
+Prioridad: 1 | Defensor: lukareli
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 478|501 (007 ferbarom (478|501) C54)
+    Jugador: ferbarom
+    Tipo: FULL
+    Tropas: 4300 hachas, 2560 ligeras, 380 arietes
+    Distancia: 34.83 campos
+    Tiempo: 17:24:50
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 18:35:09
+
+  Ataque 2:
+    Desde: 488|552 (InSaNe (488|552) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 4443 hachas, 2141 ligeras, 400 arietes
+    Distancia: 78.92 campos
+    Tiempo: 39:27:31
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 20:32:28
+
+  Ataque 3:
+    Desde: 486|554 (InSaNe (486|554) C54)
+    Jugador: Bejerano
+    Tipo: FULL
+    Tropas: 4591 hachas, 2110 ligeras, 400 arietes
+    Distancia: 81.22 campos
+    Tiempo: 40:36:28
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 19:23:31
+
+  Ataque 4:
+    Desde: 472|545 (|| ~Bollo~ || La Pika Pikeras (472|545) C54)
+    Jugador: rabagalan73
+    Tipo: MEDIA
+    Tropas: 4320 hachas, 1897 ligeras, 368 arietes
+    Distancia: 76.32 campos
+    Tiempo: 38:09:39
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 21:50:20
+
+  Ataque 5:
+    Desde: 493|558 (InSaNe (493|558) C54)
+    Jugador: Bejerano
+    Tipo: MEDIA
+    Tropas: 3817 hachas, 2154 ligeras, 400 arietes
+    Distancia: 84.29 campos
+    Tiempo: 42:08:44
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 17:51:15
+
+
+================================================================================
+OBJETIVO #36: Lloralo Kuka (499|473)
+Prioridad: 1 | Defensor: Sr.Farmer
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 482|541 ([Len] (482|541) C54)
+    Jugador: m0bscene
+    Tipo: MEDIA
+    Tropas: 4662 hachas, 1991 ligeras, 352 arietes
+    Distancia: 70.09 campos
+    Tiempo: 35:02:47
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 00:57:12
+
+  Ataque 2:
+    Desde: 446|537 (Bollito de canela (446|537) C54)
+    Jugador: Merett
+    Tipo: MEDIA
+    Tropas: 2879 hachas, 2502 ligeras, 292 arietes
+    Distancia: 83.1 campos
+    Tiempo: 41:32:53
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 18:27:06
+
+  Ataque 3:
+    Desde: 483|542 ([Lan] (483|542) C54)
+    Jugador: m0bscene
+    Tipo: MEDIA
+    Tropas: 4696 hachas, 1994 ligeras, 273 arietes
+    Distancia: 70.83 campos
+    Tiempo: 35:24:55
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 00:35:04
+
+  Ataque 4:
+    Desde: 484|538 ([Mel] (484|538) C54)
+    Jugador: m0bscene
+    Tipo: MEDIA
+    Tropas: 4546 hachas, 1946 ligeras, 337 arietes
+    Distancia: 66.71 campos
+    Tiempo: 33:21:14
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 02:38:45
+
+  Ataque 5:
+    Desde: 434|523 (BOLLITO ALMACENADO (434|523) C54)
+    Jugador: -Xiki-
+    Tipo: MEDIA
+    Tropas: 4236 hachas, 1998 ligeras, 291 arietes
+    Distancia: 82.01 campos
+    Tiempo: 41:00:10
+    Moral: 100%
+    ⏰ Enviar a las: 23/11/2025 18:59:49
+
+
+================================================================================
+OBJETIVO #37: Lloralo Kuka (498|471)
+Prioridad: 1 | Defensor: Sr.Farmer
+Ataques asignados: 5
+================================================================================
+
+  Ataque 1:
+    Desde: 448|518 (.... (448|518) C54)
+    Jugador: -Xiki-
+    Tipo: MEDIA
+    Tropas: 3609 hachas, 2054 ligeras, 363 arietes
+    Distancia: 68.62 campos
+    Tiempo: 34:18:39
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:41:20
+
+  Ataque 2:
+    Desde: 470|535 (009 NOBLE (470|535) C54)
+    Jugador: pikeras
+    Tipo: MEDIA
+    Tropas: 4703 hachas, 1841 ligeras, 270 arietes
+    Distancia: 69.86 campos
+    Tiempo: 34:55:42
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:04:17
+
+  Ataque 3:
+    Desde: 472|535 (008 NOBLE (472|535) C54)
+    Jugador: pikeras
+    Tipo: MEDIA
+    Tropas: 4453 hachas, 1806 ligeras, 250 arietes
+    Distancia: 69.08 campos
+    Tiempo: 34:32:23
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 01:27:36
+
+  Ataque 4:
+    Desde: 472|501 (BollitoZzZ (472|501) C54)
+    Jugador: Inception
+    Tipo: MEDIA
+    Tropas: 3105 hachas, 2054 ligeras, 258 arietes
+    Distancia: 39.7 campos
+    Tiempo: 19:50:57
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 16:09:02
+
+  Ataque 5:
+    Desde: 457|517 (ZzZ (457|517) C54)
+    Jugador: Jonax
+    Tipo: MEDIA
+    Tropas: 3791 hachas, 1900 ligeras, 349 arietes
+    Distancia: 61.62 campos
+    Tiempo: 30:48:35
+    Moral: 100%
+    ⏰ Enviar a las: 24/11/2025 05:11:24
+
+
+================================================================================
+PUEBLOS SIN ASIGNAR (68)
+================================================================================
+
+  • 490|552 - InSaNe (490|552) C54 (Bejerano)
+  • 487|549 - InSaNe (487|549) C54 (Bejerano)
+  • 490|553 - InSaNe (490|553) C54 (Bejerano)
+  • 490|551 - InSaNe (490|551) C54 (Bejerano)
+  • 489|545 - SS Sur (489|545) C54 (Bejerano)
+  • 496|548 - SS Sur (496|548) C54 (Bejerano)
+  • 490|538 - SS Sur (490|538) C54 (Bejerano)
+  • 493|538 - SS Sur (493|538) C54 (Bejerano)
+  • 487|537 - SS Sur (487|537) C54 (Bejerano)
+  • 447|464 - Perrito Guardian (447|464) C44 (BullDozer)
+  • 490|499 - Vae Victis 011 (490|499) C44 (BullDozer)
+  • 492|498 - Vae Victis 015 (492|498) C44 (BullDozer)
+  • 497|497 - Vae Victis 020 (497|497) C44 (BullDozer)
+  • 489|492 - Vae Victis 034 (489|492) C44 (BullDozer)
+  • 492|491 - Vae Victis 038 (492|491) C44 (BullDozer)
+  • 480|504 - 023 ferbarom (480|504) C54 (ferbarom)
+  • 473|503 - 024 ferbarom (473|503) C54 (ferbarom)
+  • 471|507 - 027 ferbarom (471|507) C54 (ferbarom)
+  • 470|508 - 029 ferbarom (470|508) C54 (ferbarom)
+  • 471|508 - 033 ferbarom (471|508) C54 (ferbarom)
+  • 477|503 - 035 ferbarom (477|503) C54 (ferbarom)
+  • 471|502 - 037 ferbarom (471|502) C54 (ferbarom)
+  • 474|510 - 046 ferbarom (474|510) C54 (ferbarom)
+  • 473|511 - 048 ferbarom (473|511) C54 (ferbarom)
+  • 484|500 - 056 ferbarom (484|500) C54 (ferbarom)
+  • 480|510 - 057 ferbarom (480|510) C54 (ferbarom)
+  • 461|492 - 074 ferbarom (461|492) C44 (ferbarom)
+  • 466|499 - 080 ferbarom (466|499) C44 (ferbarom)
+  • 486|508 - 083 ferbarom (486|508) C54 (ferbarom)
+  • 471|500 - 088 ferbarom (471|500) C54 (ferbarom)
+  • 464|523 - ZzZ (464|523) C54 (Jonax)
+  • 466|559 - 006 eNaSnI? (466|559) C54 (Opsora)
+  • 453|558 - 011 eNaSnI? (453|558) C54 (Opsora)
+  • 454|559 - 024 eNaSnI? (454|559) C54 (Opsora)
+  • 466|546 - 027 eNaSnI? (466|546) C54 (Opsora)
+  • 460|566 - 031 eNaSnI? (460|566) C54 (Opsora)
+  • 464|555 - 039 eNaSnI? (464|555) C54 (Opsora)
+  • 457|558 - 043 eNaSnI? (457|558) C54 (Opsora)
+  • 460|559 - 044 eNaSnI? (460|559) C54 (Opsora)
+  • 437|518 - 029 (437|518) C54 (Samutmt10)
+  • 437|522 - 030 a (437|522) C54 (Samutmt10)
+  • 486|563 - || ~Bollo~ || DeOp Sora (486|563) C54 (rabagalan73)
+  • 481|530 - || ~Bollo~ || El Carry Payet (481|530) C54 (rabagalan73)
+  • 492|566 - || ~Bollo~ || El Rey Pirate (492|566) C54 (rabagalan73)
+  • 490|563 - || ~Bollo~ || InSaNe (490|563) C54 (rabagalan73)
+  • 475|554 - || ~Bollo~ || Jandrito (475|554) C54 (rabagalan73)
+  • 484|531 - || ~Bollo~ || Lowasd el Bárbaro (484|531) C54 (rabagalan73)
+  • 475|550 - || ~Bollo~ || Samuel el Pep (475|550) C54 (rabagalan73)
+  • 483|534 - || ~Bollo~ || SirBoston Bestia (483|534) C54 (rabagalan73)
+  • 491|562 - || ~M0b~ || La Reina Noble (491|562) C54 (rabagalan73)
+  • 477|549 - [Vak] (477|549) C54 (m0bscene)
+  • 450|523 - 02 Sirio (450|523) C54 (Meliflua)
+  • 470|544 - Bollito Krilin (470|544) C54 (Meliflua)
+  • 485|554 - Mansion temple 006 (485|554) C54 (Demente)
+  • 497|508 - 010 Payet (497|508) C54 (ElPayet)
+  • 498|509 - 013 Payet (498|509) C54 (ElPayet)
+  • 488|519 - 016 Payet (488|519) C54 (ElPayet)
+  • 496|517 - 020 Payet (496|517) C54 (ElPayet)
+  • 494|524 - 024 Payet (494|524) C54 (ElPayet)
+  • 489|519 - 027 Payet (489|519) C54 (ElPayet)
+  • 491|570 - 003 (491|570) C54 (Inception)
+  • 478|494 - ZzZ (478|494) C44 (Inception)
+  • 470|553 - Noble (470|553) C54 (Juanm4)
+  • 443|516 - ...... (443|516) C54 (-Xiki-)
+  • 445|548 - 12monos (445|548) C54 (jonicortes)
+  • 438|539 - ANTI.PEPERO (438|539) C54 (jonicortes)
+  • 484|528 - 014 (484|528) C54 (Vakna)
+  • 441|504 - 002 (441|504) C54 (rosado49)
