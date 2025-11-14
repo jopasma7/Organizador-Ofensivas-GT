@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Outputs (opcional - descomenta si no quieres subir los planes generados)
+# plan_*.txt
+# *.csv
+
+# OS
+.DS_Store
+Thumbs.db

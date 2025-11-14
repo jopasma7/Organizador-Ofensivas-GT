@@ -1,0 +1,9 @@
+# Formato: x|y|nombre_pueblo|jugador|puntos_jugador
+# Las líneas que empiezan con # son comentarios
+# Puedes omitir nombre_pueblo, jugador y puntos_jugador si no los tienes
+
+500|500|Pueblo Principal|Raba|50000
+501|500|Pueblo 2|Raba|50000
+502|500|Pueblo 3|Raba|50000
+510|510|Castillo|JugadorX|75000
+511|510|Fortaleza|JugadorX|75000
