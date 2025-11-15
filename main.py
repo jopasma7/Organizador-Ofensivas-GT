@@ -97,69 +97,63 @@ def menu_crear_plan():
         mundo_seleccionado = 'es95'
         print(f"⚠️  Selección inválida, usando ES95")
     
-    # Cargar pueblos atacantes
-    print("\n📍 Paso 1: Cargar pueblos atacantes")
-    print("  1. Desde archivo de texto")
-    print("  2. Desde CSV de ofensivas de tribu")
-    print("  3. Pegar coordenadas directamente")
+    # Cargar pueblos atacantes desde CSV
+    print("\n📍 Paso 1: Cargar pueblos atacantes desde CSV")
     
-    opcion_pueblos = input("\n👉 Selecciona una opción (Enter para 1): ").strip() or "1"
+    from importador import leer_csv_ofensivas
     
-    pueblos = []
+    # Buscar archivo CSV en la carpeta actual
+    import os
+    archivos_csv = [f for f in os.listdir('.') if f.endswith('.csv')]
     
-    if opcion_pueblos == "1":
-        archivo_pueblos = input("\nRuta del archivo (Enter para 'data/pueblos.txt'): ").strip()
-        if not archivo_pueblos:
-            archivo_pueblos = "data/pueblos.txt"
-        pueblos = leer_pueblos_desde_archivo(archivo_pueblos)
-    
-    elif opcion_pueblos == "2":
-        from importador import leer_csv_ofensivas
-        archivo_csv = input("\nRuta del archivo CSV (Enter para buscar en carpeta actual): ").strip()
+    if archivos_csv:
+        archivo_csv = archivos_csv[0]
+        print(f"📄 Usando archivo: {archivo_csv}")
+    else:
+        print("⚠️  No se encontró ningún archivo CSV en la carpeta")
+        archivo_csv = input("Ruta del archivo CSV: ").strip()
         if not archivo_csv:
-            archivo_csv = "ofensivas_tribu_es95 (1).csv"
-        
-        print("\n🎯 Filtrar por tipo de OFF:")
-        print("  1. FULL (ofensivas completas)")
-        print("  2. MEDIA (ofensivas medias)")
-        print("  3. Todas")
-        
-        filtro = input("\n👉 Selecciona filtro (Enter para 3): ").strip() or "3"
-        
-        tipo_filtro = None
-        if filtro == "1":
-            tipo_filtro = "FULL"
-        elif filtro == "2":
-            tipo_filtro = "MEDIA"
-        
-        # Siempre usar API para obtener puntos (necesario para calcular moral)
-        print("\n🌍 Consultando API para obtener puntos de jugadores (necesario para moral)...")
-        pueblos = leer_csv_ofensivas(archivo_csv, tipo_filtro, mundo=mundo_seleccionado, usar_api=True)
+            print("\n❌ No se especificó archivo CSV")
+            input("\nPresiona Enter para continuar...")
+            return
     
-    elif opcion_pueblos == "3":
-        print("\n📋 Pega las coordenadas separadas por espacios")
-        print("Formato: 480|571 479|570 479|572 ...")
-        print("También puedes incluir más datos: 480|571|NombrePueblo|Jugador|50000")
-        coordenadas_texto = input("\n👉 Coordenadas: ").strip()
-        
-        if coordenadas_texto:
-            from importador import parse_coordenadas_lista
-            pueblos = parse_coordenadas_lista(coordenadas_texto)
-            if pueblos:
-                print(f"✅ {len(pueblos)} pueblos cargados desde coordenadas")
-        else:
-            print("\n❌ No se ingresaron coordenadas")
+    # Filtrar por tipo de ofensiva
+    print("\n🎯 Filtrar por tipo de OFF:")
+    print("  1. SUPER (ofensivas super)")
+    print("  2. FULL (ofensivas completas)")
+    print("  3. 3/4 (tres cuartos)")
+    print("  4. MEDIA (ofensivas medias)")
+    print("  5. Todas")
+    
+    filtro = input("\n👉 Selecciona filtro (Enter para 5): ").strip() or "5"
+    
+    tipo_filtro = None
+    if filtro == "1":
+        tipo_filtro = "SUPER"
+    elif filtro == "2":
+        tipo_filtro = "FULL"
+    elif filtro == "3":
+        tipo_filtro = "3/4"
+    elif filtro == "4":
+        tipo_filtro = "MEDIA"
+    
+    # Siempre usar API para obtener puntos (necesario para calcular moral)
+    print("\n🌍 Consultando API para obtener puntos de jugadores (necesario para moral)...")
+    pueblos = leer_csv_ofensivas(archivo_csv, tipo_filtro, mundo=mundo_seleccionado, usar_api=True)
     
     if not pueblos:
         print("\n❌ No se pudieron cargar los pueblos")
         input("\nPresiona Enter para continuar...")
         return
     
-    # Cargar objetivos (siempre desde archivo)
+    # Mostrar total de ofensivas disponibles
+    total_ofensivas = len(pueblos)
+    print(f"\n✅ Total de ofensivas disponibles: {total_ofensivas}")
+    
+    # Cargar objetivos desde archivo por defecto
     print("\n🎯 Paso 2: Cargar objetivos")
-    archivo_objetivos = input("Ruta del archivo (Enter para 'data/objetivos.txt'): ").strip()
-    if not archivo_objetivos:
-        archivo_objetivos = "data/objetivos.txt"
+    archivo_objetivos = "data/objetivos.txt"
+    print(f"📄 Usando archivo: {archivo_objetivos}")
     
     # Siempre usar API para obtener puntos (necesario para calcular moral)
     print("🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
@@ -183,14 +177,39 @@ def menu_crear_plan():
     if modo_ataques == "1":
         # Modo manual: pedir para cada objetivo
         print("\n📋 Asignar ataques manualmente:")
-        for objetivo in objetivos:
+        ofensivas_restantes = total_ofensivas
+        
+        for i, objetivo in enumerate(objetivos, 1):
             coord_str = f"{objetivo['coordenadas'][0]}|{objetivo['coordenadas'][1]}"
-            print(f"\n  Objetivo: {coord_str} - {objetivo['nombre']}")
+            print(f"\n  [{i}/{len(objetivos)}] Objetivo: {coord_str} - {objetivo['nombre']}")
+            print(f"  🎯 Ofensivas disponibles: {ofensivas_restantes}")
+            
+            if ofensivas_restantes == 0:
+                print("  ⚠️  ¡No quedan ofensivas disponibles!")
+                respuesta = input("  ¿Continuar sin asignar a este objetivo? (s/n, Enter=s): ").strip().lower()
+                if respuesta != 'n':
+                    ataques_por_objetivo_dict[coord_str] = 0
+                    continue
+                else:
+                    break
+            
             try:
-                num_ataques = int(input(f"    ¿Cuántas ofensivas? (Enter para 5): ").strip() or "5")
+                max_sugerido = min(5, ofensivas_restantes)
+                num_ataques = int(input(f"    ¿Cuántas ofensivas? (Enter para {max_sugerido}): ").strip() or str(max_sugerido))
+                
+                if num_ataques > ofensivas_restantes:
+                    print(f"  ⚠️  Solo hay {ofensivas_restantes} ofensivas disponibles. Ajustando...")
+                    num_ataques = ofensivas_restantes
+                
                 ataques_por_objetivo_dict[coord_str] = num_ataques
+                ofensivas_restantes -= num_ataques
+                
             except:
-                ataques_por_objetivo_dict[coord_str] = 5
+                ataques_por_objetivo_dict[coord_str] = min(5, ofensivas_restantes)
+                ofensivas_restantes -= ataques_por_objetivo_dict[coord_str]
+        
+        if ofensivas_restantes > 0:
+            print(f"\n✅ Asignación completa. Ofensivas sin asignar: {ofensivas_restantes}")
         
         # Usar el promedio como valor por defecto para la función
         ataques_por_objetivo = 5
@@ -200,6 +219,25 @@ def menu_crear_plan():
             ataques_por_objetivo = int(input("\nAtaques por objetivo (Enter para 5): ").strip() or "5")
         except:
             ataques_por_objetivo = 5
+        
+        # Calcular si hay suficientes ofensivas
+        total_necesarias = len(objetivos) * ataques_por_objetivo
+        print(f"\n📊 Cálculo de ofensivas:")
+        print(f"   • Objetivos: {len(objetivos)}")
+        print(f"   • Ofensivas por objetivo: {ataques_por_objetivo}")
+        print(f"   • Total necesarias: {total_necesarias}")
+        print(f"   • Disponibles: {total_ofensivas}")
+        
+        if total_necesarias > total_ofensivas:
+            print(f"\n⚠️  ADVERTENCIA: No hay suficientes ofensivas!")
+            print(f"   Faltan: {total_necesarias - total_ofensivas} ofensivas")
+            respuesta = input("\n¿Continuar de todos modos? (s/n, Enter=s): ").strip().lower()
+            if respuesta == 'n':
+                input("\nPresiona Enter para continuar...")
+                return
+        else:
+            sobrantes = total_ofensivas - total_necesarias
+            print(f"   ✅ Sobran: {sobrantes} ofensivas")
         
         # Llenar el diccionario con el mismo valor para todos
         for objetivo in objetivos:

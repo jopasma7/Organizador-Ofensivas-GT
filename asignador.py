@@ -326,21 +326,40 @@ def asignar_optimizando_moral(pueblos_atacantes, objetivos, ataques_por_objetivo
                 # Calcular moral para esta combinación
                 moral = calcular_moral(puntos_atacante, puntos_defensor)
                 
-                # PRIORIDAD 1: Moral (usar >= 90% como "buena moral")
-                # PRIORIDAD 2: Población de tropas (más grande = mejor)
+                # Verificar si este jugador ya tiene ataques en este objetivo
+                jugadores_en_objetivo = [atk['jugador'] for atk in obj_info['ataques_asignados']]
+                jugador_repetido = pueblo['jugador'] in jugadores_en_objetivo
+                
+                # PRIORIDAD ABSOLUTA: MORAL
+                # PRIORIDAD 2: Evitar repetir jugadores (solo si la moral es similar)
+                # PRIORIDAD 3: Población de tropas (más grande = mejor)
+                
+                # Aplicar penalización LEVE si el jugador ya está asignado
+                # La penalización solo afecta cuando las morales son muy similares (diferencia < 5%)
+                moral_efectiva = moral
+                if jugador_repetido:
+                    # Penalización muy pequeña (solo 2 puntos) para preferir diversidad
+                    # pero sin sacrificar moral significativamente
+                    moral_efectiva = moral - 2
                 
                 # Determinar si esta combinación es mejor que la actual
                 es_mejor = False
                 
-                if moral > mejor_moral:
-                    # Moral claramente mejor
+                # Comparar moral con margen de tolerancia
+                diferencia_moral = moral_efectiva - mejor_moral
+                
+                if diferencia_moral > 5:
+                    # Moral significativamente mejor (>5% de diferencia)
                     es_mejor = True
-                elif moral == mejor_moral and poblacion_total > mejor_poblacion:
-                    # Misma moral, pero más tropas
+                elif diferencia_moral > 0:
+                    # Moral ligeramente mejor
+                    es_mejor = True
+                elif abs(diferencia_moral) <= 2 and poblacion_total > mejor_poblacion:
+                    # Moral prácticamente igual (±2%), pero más tropas
                     es_mejor = True
                 
                 if es_mejor:
-                    mejor_moral = moral
+                    mejor_moral = moral_efectiva
                     mejor_poblacion = poblacion_total
                     mejor_pueblo = pueblo
                     mejor_objetivo_idx = idx
@@ -380,11 +399,12 @@ def asignar_optimizando_moral(pueblos_atacantes, objetivos, ataques_por_objetivo
             objetivos_info[mejor_objetivo_idx]['ataques_necesarios'] -= 1
             pueblos_disponibles.remove(mejor_pueblo)
             
-            # Actualizar estadísticas
-            plan['estadisticas_moral']['moral_promedio'] += mejor_moral
-            if mejor_moral == 100:
+            # Actualizar estadísticas (usar la moral real del ataque, no la penalizada)
+            moral_real = mejor_asignacion['moral']
+            plan['estadisticas_moral']['moral_promedio'] += moral_real
+            if moral_real == 100:
                 plan['estadisticas_moral']['ataques_100_moral'] += 1
-            elif mejor_moral < 50:
+            elif moral_real < 50:
                 plan['estadisticas_moral']['ataques_baja_moral'] += 1
         else:
             break

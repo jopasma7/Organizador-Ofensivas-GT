@@ -97,13 +97,14 @@ def leer_csv_ofensivas(ruta_archivo, filtro_tipo=None, mundo=None, usar_api=True
                         x, y = int(match.group(1)), int(match.group(2))
                         
                         # Extraer estadísticas si están disponibles
+                        # Formato CSV: Jugador,ID,Nombre,vacío,vacío,vacío,vacío,Hachas,Ligeras,Arq.Caballo,Arietes,Catapultas,Pob.Total
                         try:
-                            hachas = int(partes[4]) if len(partes) > 4 and partes[4] else 0
-                            ligeras = int(partes[5]) if len(partes) > 5 and partes[5] else 0
-                            arq_cab = int(partes[6]) if len(partes) > 6 and partes[6] else 0
-                            arietes = int(partes[7]) if len(partes) > 7 and partes[7] else 0
-                            catapultas = int(partes[8]) if len(partes) > 8 and partes[8] else 0
-                            pob_total = int(partes[9]) if len(partes) > 9 and partes[9] else 0
+                            hachas = int(partes[7]) if len(partes) > 7 and partes[7] else 0
+                            ligeras = int(partes[8]) if len(partes) > 8 and partes[8] else 0
+                            arq_cab = int(partes[9]) if len(partes) > 9 and partes[9] else 0
+                            arietes = int(partes[10]) if len(partes) > 10 and partes[10] else 0
+                            catapultas = int(partes[11]) if len(partes) > 11 and partes[11] else 0
+                            pob_total = int(partes[12]) if len(partes) > 12 and partes[12] else 0
                         except (ValueError, IndexError):
                             hachas = ligeras = arq_cab = arietes = catapultas = pob_total = 0
                         
@@ -127,12 +128,24 @@ def leer_csv_ofensivas(ruta_archivo, filtro_tipo=None, mundo=None, usar_api=True
         
         print(f"✅ {len(pueblos)} pueblos cargados desde CSV de ofensivas")
         
-        # Mostrar estadísticas
+        # Mostrar estadísticas por tipo
+        super_count = sum(1 for p in pueblos if p.get('tipo_off') == 'SUPER')
         full_count = sum(1 for p in pueblos if p.get('tipo_off') == 'FULL')
+        tres_cuartos_count = sum(1 for p in pueblos if p.get('tipo_off') == '3/4')
         media_count = sum(1 for p in pueblos if p.get('tipo_off') == 'MEDIA')
         
-        if full_count > 0 or media_count > 0:
-            print(f"   📊 FULL: {full_count} | MEDIA: {media_count}")
+        stats = []
+        if super_count > 0:
+            stats.append(f"SUPER: {super_count}")
+        if full_count > 0:
+            stats.append(f"FULL: {full_count}")
+        if tres_cuartos_count > 0:
+            stats.append(f"3/4: {tres_cuartos_count}")
+        if media_count > 0:
+            stats.append(f"MEDIA: {media_count}")
+        
+        if stats:
+            print(f"   📊 {' | '.join(stats)}")
         
         # Enriquecer con puntos de jugadores desde API
         if mundo and usar_api and jugadores_unicos:
