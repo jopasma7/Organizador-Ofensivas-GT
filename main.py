@@ -137,6 +137,9 @@ def menu_crear_plan():
     elif filtro == "4":
         tipo_filtro = "MEDIA"
     
+    # Guardar el tipo de filtro seleccionado para usar después
+    filtro_seleccionado = filtro
+    
     # Siempre usar API para obtener puntos (necesario para calcular moral)
     print("\n🌍 Consultando API para obtener puntos de jugadores (necesario para moral)...")
     pueblos = leer_csv_ofensivas(archivo_csv, tipo_filtro, mundo=mundo_seleccionado, usar_api=True)
@@ -149,6 +152,14 @@ def menu_crear_plan():
     # Mostrar total de ofensivas disponibles
     total_ofensivas = len(pueblos)
     print(f"\n✅ Total de ofensivas disponibles: {total_ofensivas}")
+    
+    # Si se seleccionó "Todas", contar por tipo
+    if filtro_seleccionado == "5":
+        super_count = sum(1 for p in pueblos if p.get('tipo_off') == 'SUPER')
+        full_count = sum(1 for p in pueblos if p.get('tipo_off') == 'FULL')
+        tres_cuartos_count = sum(1 for p in pueblos if p.get('tipo_off') == '3/4')
+        media_count = sum(1 for p in pueblos if p.get('tipo_off') == 'MEDIA')
+        print(f"   📊 Desglose: SUPER={super_count}, FULL={full_count}, 3/4={tres_cuartos_count}, MEDIA={media_count}")
     
     # Cargar objetivos desde archivo por defecto
     print("\n🎯 Paso 2: Cargar objetivos")
@@ -173,16 +184,56 @@ def menu_crear_plan():
     
     # Diccionario para guardar ataques por objetivo
     ataques_por_objetivo_dict = {}
+    # Diccionario para guardar tipo de OFF por objetivo (si se seleccionó "Todas")
+    tipo_off_por_objetivo = {}
     
     if modo_ataques == "1":
         # Modo manual: pedir para cada objetivo
         print("\n📋 Asignar ataques manualmente:")
         ofensivas_restantes = total_ofensivas
         
+        # Trackear ofensivas ya asignadas por tipo
+        asignadas_por_tipo = {'SUPER': 0, 'FULL': 0, '3/4': 0, 'MEDIA': 0}
+        
         for i, objetivo in enumerate(objetivos, 1):
             coord_str = f"{objetivo['coordenadas'][0]}|{objetivo['coordenadas'][1]}"
-            print(f"\n  [{i}/{len(objetivos)}] Objetivo: {coord_str} - {objetivo['nombre']}")
+            jugador_def = objetivo.get('jugador_defensor', 'Desconocido')
+            print(f"\n  [{i}/{len(objetivos)}] Objetivo: {coord_str} - {objetivo['nombre']} (Jugador: {jugador_def})")
             print(f"  🎯 Ofensivas disponibles: {ofensivas_restantes}")
+            
+            # Si se seleccionó "Todas", preguntar tipo de OFF
+            tipo_off_objetivo = None
+            if filtro_seleccionado == "5":
+                print("\n  🎯 ¿Qué tipo de OFF usar para este objetivo?")
+                # Contar totales de cada tipo
+                super_total = sum(1 for p in pueblos if p.get('tipo_off') == 'SUPER')
+                full_total = sum(1 for p in pueblos if p.get('tipo_off') == 'FULL')
+                tres_total = sum(1 for p in pueblos if p.get('tipo_off') == '3/4')
+                media_total = sum(1 for p in pueblos if p.get('tipo_off') == 'MEDIA')
+                
+                # Calcular disponibles (total - asignadas)
+                super_disp = super_total - asignadas_por_tipo['SUPER']
+                full_disp = full_total - asignadas_por_tipo['FULL']
+                tres_disp = tres_total - asignadas_por_tipo['3/4']
+                media_disp = media_total - asignadas_por_tipo['MEDIA']
+                
+                print(f"    1. SUPER (disponibles: {super_disp})")
+                print(f"    2. FULL (disponibles: {full_disp})")
+                print(f"    3. 3/4 (disponibles: {tres_disp})")
+                print(f"    4. MEDIA (disponibles: {media_disp})")
+                print(f"    5. Cualquiera (usar todas las disponibles)")
+                
+                tipo_input = input("    👉 Selecciona tipo (Enter para 5): ").strip() or "5"
+                if tipo_input == "1":
+                    tipo_off_objetivo = "SUPER"
+                elif tipo_input == "2":
+                    tipo_off_objetivo = "FULL"
+                elif tipo_input == "3":
+                    tipo_off_objetivo = "3/4"
+                elif tipo_input == "4":
+                    tipo_off_objetivo = "MEDIA"
+                
+                tipo_off_por_objetivo[coord_str] = tipo_off_objetivo
             
             if ofensivas_restantes == 0:
                 print("  ⚠️  ¡No quedan ofensivas disponibles!")
@@ -204,9 +255,16 @@ def menu_crear_plan():
                 ataques_por_objetivo_dict[coord_str] = num_ataques
                 ofensivas_restantes -= num_ataques
                 
+                # Actualizar contador de asignadas por tipo (solo si se seleccionó tipo específico)
+                if tipo_off_objetivo and tipo_off_objetivo in asignadas_por_tipo:
+                    asignadas_por_tipo[tipo_off_objetivo] += num_ataques
+                
             except:
                 ataques_por_objetivo_dict[coord_str] = min(5, ofensivas_restantes)
                 ofensivas_restantes -= ataques_por_objetivo_dict[coord_str]
+                # Actualizar contador de asignadas por tipo
+                if tipo_off_objetivo and tipo_off_objetivo in asignadas_por_tipo:
+                    asignadas_por_tipo[tipo_off_objetivo] += ataques_por_objetivo_dict[coord_str]
         
         if ofensivas_restantes > 0:
             print(f"\n✅ Asignación completa. Ofensivas sin asignar: {ofensivas_restantes}")
@@ -240,9 +298,38 @@ def menu_crear_plan():
             print(f"   ✅ Sobran: {sobrantes} ofensivas")
         
         # Llenar el diccionario con el mismo valor para todos
-        for objetivo in objetivos:
+        for i, objetivo in enumerate(objetivos, 1):
             coord_str = f"{objetivo['coordenadas'][0]}|{objetivo['coordenadas'][1]}"
             ataques_por_objetivo_dict[coord_str] = ataques_por_objetivo
+            
+            # Si se seleccionó "Todas", preguntar tipo de OFF para cada objetivo
+            if filtro_seleccionado == "5":
+                jugador_def = objetivo.get('jugador_defensor', 'Desconocido')
+                print(f"\n  [{i}/{len(objetivos)}] Objetivo: {coord_str} - {objetivo['nombre']} (Jugador: {jugador_def})")
+                print("  🎯 ¿Qué tipo de OFF usar para este objetivo?")
+                super_disp = sum(1 for p in pueblos if p.get('tipo_off') == 'SUPER')
+                full_disp = sum(1 for p in pueblos if p.get('tipo_off') == 'FULL')
+                tres_disp = sum(1 for p in pueblos if p.get('tipo_off') == '3/4')
+                media_disp = sum(1 for p in pueblos if p.get('tipo_off') == 'MEDIA')
+                
+                print(f"    1. SUPER (disponibles: {super_disp})")
+                print(f"    2. FULL (disponibles: {full_disp})")
+                print(f"    3. 3/4 (disponibles: {tres_disp})")
+                print(f"    4. MEDIA (disponibles: {media_disp})")
+                print(f"    5. Cualquiera (usar todas las disponibles)")
+                
+                tipo_input = input("    👉 Selecciona tipo (Enter para 5): ").strip() or "5"
+                tipo_off_objetivo = None
+                if tipo_input == "1":
+                    tipo_off_objetivo = "SUPER"
+                elif tipo_input == "2":
+                    tipo_off_objetivo = "FULL"
+                elif tipo_input == "3":
+                    tipo_off_objetivo = "3/4"
+                elif tipo_input == "4":
+                    tipo_off_objetivo = "MEDIA"
+                
+                tipo_off_por_objetivo[coord_str] = tipo_off_objetivo
     
     # Seleccionar tipo de tropa para cálculo de tiempos
     print("\n🏃 Paso 3.5: Tipo de tropa para calcular tiempos")
@@ -307,20 +394,69 @@ def menu_crear_plan():
         print("   (Jugadores pequeños → Objetivos pequeños)")
         print("   (Jugadores grandes → Objetivos grandes)")
         
-        # Preguntar por hora de llegada
-        print("\n⏰ Configurar hora de llegada sincronizada")
-        fecha_str = input("Fecha y hora (formato: HH:MM:SS DD/MM/YYYY): ").strip()
+        # Preguntar por rango de llegada
+        print("\n⏰ Configurar ventana de llegada (opcional)")
+        print("   Ejemplo: 02:00:00 16/11/2025 a las 06:00:00 16/11/2025")
+        print("   (Presiona Enter para omitir sincronización)")
+        rango_str = input("\nRango de llegada: ").strip()
         
-        hora_llegada = None
-        if fecha_str:
+        hora_inicio = None
+        hora_fin = None
+        
+        if rango_str:
             try:
-                # Parsear formato HH:MM:SS DD/MM/YYYY
-                hora_llegada = datetime.strptime(fecha_str, "%H:%M:%S %d/%m/%Y")
+                # Parsear formato: "HH:MM:SS DD/MM/YYYY a las HH:MM:SS DD/MM/YYYY"
+                if " a las " in rango_str.lower():
+                    partes = rango_str.lower().split(" a las ")
+                    hora_inicio = datetime.strptime(partes[0].strip(), "%H:%M:%S %d/%m/%Y")
+                    hora_fin = datetime.strptime(partes[1].strip(), "%H:%M:%S %d/%m/%Y")
+                    
+                    if hora_fin <= hora_inicio:
+                        print("\n⚠️  La hora de fin debe ser posterior a la de inicio. Generando sin sincronización...")
+                        hora_inicio = None
+                        hora_fin = None
+                else:
+                    print("\n⚠️  Formato incorrecto. Usa: HH:MM:SS DD/MM/YYYY a las HH:MM:SS DD/MM/YYYY")
+                    print("   Generando sin sincronización...")
             except ValueError:
                 print("\n❌ Formato de fecha inválido. Generando sin sincronización...")
         
+        # Usar el punto medio del rango como hora de llegada objetivo
+        hora_llegada = None
+        if hora_inicio and hora_fin:
+            # Calcular el punto medio del rango
+            diferencia = (hora_fin - hora_inicio).total_seconds() / 2
+            hora_llegada = hora_inicio + timedelta(seconds=diferencia)
+            print(f"\n✅ Ventana configurada: {hora_inicio.strftime('%H:%M:%S %d/%m/%Y')} - {hora_fin.strftime('%H:%M:%S %d/%m/%Y')}")
+            print(f"   Objetivo central: {hora_llegada.strftime('%H:%M:%S %d/%m/%Y')}")
+        
         print("\n⚙️  Generando plan...")
-        plan = asignar_optimizando_moral(pueblos, objetivos, ataques_por_objetivo_dict, mundo_seleccionado, tipo_tropa, hora_llegada)
+        # Pasar el filtro de tipo de OFF si se seleccionó "Todas"
+        tipo_off_dict = tipo_off_por_objetivo if filtro_seleccionado == "5" else None
+        plan = asignar_optimizando_moral(pueblos, objetivos, ataques_por_objetivo_dict, mundo_seleccionado, tipo_tropa, hora_llegada, tipo_off_dict)
+        
+        # Agregar información de la ventana al plan y calcular rangos de envío
+        if hora_inicio and hora_fin:
+            plan['ventana_llegada'] = {
+                'inicio': hora_inicio.strftime('%H:%M:%S %d/%m/%Y'),
+                'fin': hora_fin.strftime('%H:%M:%S %d/%m/%Y'),
+                'objetivo': hora_llegada.strftime('%H:%M:%S %d/%m/%Y')
+            }
+            
+            # Calcular rango de envío para cada ataque
+            for objetivo in plan['objetivos']:
+                for ataque in objetivo['ataques']:
+                    tiempo_viaje_mins = ataque['tiempo_viaje_minutos']
+                    
+                    # Hora de envío para llegar al inicio de la ventana
+                    hora_envio_min = hora_inicio - timedelta(minutes=tiempo_viaje_mins)
+                    
+                    # Hora de envío para llegar al final de la ventana
+                    hora_envio_max = hora_fin - timedelta(minutes=tiempo_viaje_mins)
+                    
+                    # Guardar el rango como string
+                    ataque['hora_envio'] = f"{hora_envio_min.strftime('%d/%m/%Y %H:%M:%S')} hasta {hora_envio_max.strftime('%d/%m/%Y %H:%M:%S')}"
+                    ataque['hora_llegada'] = f"{hora_inicio.strftime('%d/%m/%Y %H:%M:%S')} - {hora_fin.strftime('%d/%m/%Y %H:%M:%S')}"
         
         # Mostrar estadísticas de moral
         if 'estadisticas_moral' in plan:
