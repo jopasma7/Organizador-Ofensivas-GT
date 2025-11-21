@@ -31,8 +31,9 @@ def asignar_ataques_por_distancia(pueblos_atacantes, objetivos, ataques_por_obje
     
     pueblos_disponibles = pueblos_atacantes.copy()
     
-    # Ordenar objetivos por prioridad
-    objetivos_ordenados = sorted(objetivos, key=lambda x: x.get('prioridad', 1))
+    # Ordenar objetivos por puntos del jugador defensor (menor a mayor)
+    # Esto asegura que jugadores pequeños ataquen primero a defensores pequeños (moral óptima)
+    objetivos_ordenados = sorted(objetivos, key=lambda x: x.get('puntos_defensor', 0))
     
     for objetivo in objetivos_ordenados:
         coord_objetivo = objetivo['coordenadas']
@@ -77,7 +78,6 @@ def asignar_ataques_por_distancia(pueblos_atacantes, objetivos, ataques_por_obje
         plan['objetivos'].append({
             'coordenadas': coordenadas_a_string(coord_objetivo),
             'nombre': objetivo['nombre'],
-            'prioridad': objetivo.get('prioridad', 1),
             'jugador_defensor': objetivo.get('jugador_defensor', 'Desconocido'),
             'ataques': ataques_asignados,
             'ataques_asignados': len(ataques_asignados)
@@ -216,7 +216,6 @@ def balancear_por_jugador(pueblos_atacantes, objetivos, ataques_por_objetivo=5, 
         plan['objetivos'].append({
             'coordenadas': coordenadas_a_string(coord_objetivo),
             'nombre': objetivo['nombre'],
-            'prioridad': objetivo.get('prioridad', 1),
             'ataques': ataques_asignados
         })
     
@@ -225,7 +224,7 @@ def balancear_por_jugador(pueblos_atacantes, objetivos, ataques_por_objetivo=5, 
     return plan
 
 
-def asignar_optimizando_moral(pueblos_atacantes, objetivos, ataques_por_objetivo=5, mundo='es95', tipo_tropa='noble', hora_llegada=None):
+def asignar_optimizando_moral(pueblos_atacantes, objetivos, ataques_por_objetivo=5, mundo='es95', tipo_tropa='noble', hora_llegada=None, tipo_off_por_objetivo=None):
     """
     Asigna ataques optimizando la moral del plan.
     
@@ -246,6 +245,8 @@ def asignar_optimizando_moral(pueblos_atacantes, objetivos, ataques_por_objetivo
         mundo: identificador del mundo para calcular tiempos
         tipo_tropa: tipo de tropa para calcular tiempos de viaje
         hora_llegada: (opcional) datetime para sincronizar llegadas
+        tipo_off_por_objetivo: (opcional) dict con tipo de OFF por objetivo {coord_string: tipo}
+            - Si se proporciona, solo se usan ofensivas del tipo especificado para cada objetivo
     
     Returns:
         dict: plan de ataque optimizado por moral
@@ -267,9 +268,13 @@ def asignar_optimizando_moral(pueblos_atacantes, objetivos, ataques_por_objetivo
     if hora_llegada:
         plan['hora_llegada_objetivo'] = hora_llegada.strftime('%d/%m/%Y %H:%M:%S')
     
+    # Ordenar objetivos por puntos del jugador defensor (menor a mayor)
+    # Esto asegura que jugadores pequeños ataquen primero a defensores pequeños (moral óptima)
+    objetivos_ordenados = sorted(objetivos, key=lambda x: x.get('puntos_defensor', 0))
+    
     # Crear estructura para trackear cuántos ataques necesita cada objetivo
     objetivos_info = []
-    for objetivo in objetivos:
+    for objetivo in objetivos_ordenados:
         # Determinar cuántos ataques necesita este objetivo
         if isinstance(ataques_por_objetivo, dict):
             coord_str = coordenadas_a_string(objetivo['coordenadas'])
@@ -321,26 +326,29 @@ def asignar_optimizando_moral(pueblos_atacantes, objetivos, ataques_por_objetivo
                     continue
                 
                 objetivo = obj_info['objetivo']
+                
+                # Si hay filtro de tipo de OFF, verificar que este pueblo cumpla
+                if tipo_off_por_objetivo:
+                    coord_str = coordenadas_a_string(objetivo['coordenadas'])
+                    tipo_requerido = tipo_off_por_objetivo.get(coord_str)
+                    
+                    # Si se especificó un tipo para este objetivo, filtrar
+                    if tipo_requerido:
+                        tipo_pueblo = pueblo.get('tipo_off')
+                        if tipo_pueblo != tipo_requerido:
+                            continue  # Este pueblo no es del tipo requerido, saltar
+                
                 puntos_defensor = objetivo.get('puntos_defensor', 0)
                 
-                # Calcular moral para esta combinación
+                # Calcular moral para esta combinaci\u00f3n
                 moral = calcular_moral(puntos_atacante, puntos_defensor)
                 
-                # Verificar si este jugador ya tiene ataques en este objetivo
-                jugadores_en_objetivo = [atk['jugador'] for atk in obj_info['ataques_asignados']]
-                jugador_repetido = pueblo['jugador'] in jugadores_en_objetivo
-                
                 # PRIORIDAD ABSOLUTA: MORAL
-                # PRIORIDAD 2: Evitar repetir jugadores (solo si la moral es similar)
-                # PRIORIDAD 3: Población de tropas (más grande = mejor)
-                
-                # Aplicar penalización LEVE si el jugador ya está asignado
-                # La penalización solo afecta cuando las morales son muy similares (diferencia < 5%)
+                # No hay penalizaci\u00f3n por repetir jugadores en el mismo objetivo
+                # Si un jugador tiene varias ofensivas con buena moral, que vayan todas
+                # Es mejor tener 2 ataques del mismo jugador a 100% moral
+                # que tener 1 ataque a 100% y otro a 66% moral
                 moral_efectiva = moral
-                if jugador_repetido:
-                    # Penalización muy pequeña (solo 2 puntos) para preferir diversidad
-                    # pero sin sacrificar moral significativamente
-                    moral_efectiva = moral - 2
                 
                 # Determinar si esta combinación es mejor que la actual
                 es_mejor = False
@@ -392,6 +400,11 @@ def asignar_optimizando_moral(pueblos_atacantes, objetivos, ataques_por_objetivo
                         mejor_asignacion['tropas'] = pueblo['tropas']
                     if 'poblacion_ofensiva' in pueblo:
                         mejor_asignacion['poblacion_ofensiva'] = pueblo['poblacion_ofensiva']
+                    if 'village_id' in pueblo:
+                        mejor_asignacion['village_id'] = pueblo['village_id']
+                    
+                    # Añadir coordenadas del objetivo
+                    mejor_asignacion['coordenadas_objetivo'] = objetivo['coordenadas']
         
         # Asignar la mejor combinación encontrada
         if mejor_asignacion:
@@ -418,7 +431,6 @@ def asignar_optimizando_moral(pueblos_atacantes, objetivos, ataques_por_objetivo
         plan['objetivos'].append({
             'coordenadas': coordenadas_a_string(objetivo['coordenadas']),
             'nombre': objetivo['nombre'],
-            'prioridad': objetivo.get('prioridad', 1),
             'jugador_defensor': objetivo.get('jugador_defensor', 'Desconocido'),
             'ataques': ataques,
             'ataques_asignados': len(ataques)

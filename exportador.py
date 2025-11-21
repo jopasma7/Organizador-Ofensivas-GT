@@ -28,7 +28,10 @@ def exportar_comandos_texto(plan, ruta_archivo):
                 velocidad = obtener_velocidad_tropa(plan['tipo_tropa'], plan['mundo'])
                 f.write(f"🏃 Tipo de tropa: {plan['tipo_tropa']} ({velocidad:.1f} min/campo)\n")
         
-        if 'hora_llegada_objetivo' in plan:
+        if 'ventana_llegada' in plan:
+            f.write(f"⏰ Ventana de llegada: {plan['ventana_llegada']['inicio']} - {plan['ventana_llegada']['fin']}\n")
+            f.write(f"🎯 Objetivo central: {plan['ventana_llegada']['objetivo']}\n")
+        elif 'hora_llegada_objetivo' in plan:
             f.write(f"🎯 Hora de llegada objetivo: {plan['hora_llegada_objetivo']}\n")
         
         f.write("\n")
@@ -36,7 +39,6 @@ def exportar_comandos_texto(plan, ruta_archivo):
         for idx, objetivo in enumerate(plan['objetivos'], 1):
             f.write(f"\n{'='*80}\n")
             f.write(f"OBJETIVO #{idx}: {objetivo['nombre']} ({objetivo['coordenadas']})\n")
-            f.write(f"Prioridad: {objetivo.get('prioridad', 'N/A')} | ")
             f.write(f"Defensor: {objetivo.get('jugador_defensor', 'Desconocido')}\n")
             f.write(f"Ataques asignados: {len(objetivo['ataques'])}\n")
             f.write(f"{'='*80}\n\n")
@@ -152,22 +154,24 @@ def exportar_bbcode(plan, ruta_archivo):
     with open(ruta_archivo, 'w', encoding='utf-8') as f:
         f.write("[b][size=14]PLAN DE ATAQUE[/size][/b]\n\n")
         
-        if 'hora_llegada_objetivo' in plan:
+        if 'ventana_llegada' in plan:
+            f.write(f"[b]⏰ Ventana de llegada:[/b] {plan['ventana_llegada']['inicio']} - {plan['ventana_llegada']['fin']}\n")
+            f.write(f"[b]🎯 Objetivo central:[/b] {plan['ventana_llegada']['objetivo']}\n\n")
+        elif 'hora_llegada_objetivo' in plan:
             f.write(f"[b]🎯 Hora de llegada:[/b] {plan['hora_llegada_objetivo']}\n\n")
         
         for idx, objetivo in enumerate(plan['objetivos'], 1):
             f.write(f"[b][size=12]Objetivo #{idx}: {objetivo['nombre']}[/size][/b]\n")
             f.write(f"[b]Coordenadas:[/b] [coord]{objetivo['coordenadas']}[/coord]\n")
-            f.write(f"[b]Prioridad:[/b] {objetivo.get('prioridad', 'N/A')}\n")
             f.write(f"[b]Ataques:[/b] {len(objetivo['ataques'])}\n\n")
             
             f.write("[table]\n")
-            f.write("[**]Desde[||]Jugador[||]Tropas[||]Distancia[||]Tiempo[||]Moral")
+            f.write("[**]Desde[||]Jugador[||]Tropas[||]Moral")
             
             if objetivo['ataques'] and 'hora_envio' in objetivo['ataques'][0]:
                 f.write("[||]Hora Envío")
             
-            f.write("[/**]\n")
+            f.write("[||]Lanzar[/**]\n")
             
             for ataque in objetivo['ataques']:
                 f.write(f"[*][coord]{ataque['pueblo_atacante']}[/coord]")
@@ -191,12 +195,20 @@ def exportar_bbcode(plan, ruta_archivo):
                 else:
                     f.write("[|]-")
                 
-                f.write(f"[|]{ataque['distancia']}")
-                f.write(f"[|]{ataque['tiempo_viaje']}")
                 f.write(f"[|]{ataque['moral']}%")
                 
                 if 'hora_envio' in ataque:
                     f.write(f"[|]{ataque['hora_envio']}")
+                
+                # Columna Lanzar con enlace directo
+                if 'village_id' in ataque and 'coordenadas_objetivo' in ataque:
+                    village_id = ataque['village_id']
+                    x_obj, y_obj = ataque['coordenadas_objetivo']
+                    mundo = plan.get('mundo', 'es95')
+                    url = f"https://{mundo}.guerrastribales.es/game.php?village={village_id}&screen=place&x={x_obj}&y={y_obj}"
+                    f.write(f"[|][url={url}]Lanzar[/url]")
+                else:
+                    f.write("[|]-")
                 
                 f.write("\n")
             
