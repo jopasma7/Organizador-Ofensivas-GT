@@ -141,38 +141,47 @@ def menu_crear_plan():
         media_count = sum(1 for p in pueblos if p.get('tipo_off') == 'MEDIA')
         print(f"   📊 Desglose: SUPER={super_count}, FULL={full_count}, 3/4={tres_cuartos_count}, MEDIA={media_count}")
     
-    # Cargar objetivos desde archivo por defecto
-    print("\n🎯 Paso 2: Cargar objetivos")
+    # Inicializar variables para el bucle de categorías
     archivo_objetivos = "data/objetivos.txt"
-    print(f"📄 Usando archivo: {archivo_objetivos}")
-    
-    # Leer categorías disponibles
     categorias = leer_categorias_objetivos(archivo_objetivos)
     
-    objetivos = []
-    categorias_seleccionadas = []
+    objetivos_totales = []
+    categorias_disponibles = list(categorias.keys()) if categorias else []
+    categorias_procesadas = []
     
-    if categorias:
-        # Hay categorías, permitir selección múltiple
-        categorias_disponibles = list(categorias.keys())
+    # Diccionario para guardar ataques por objetivo (acumulativo entre categorías)
+    ataques_por_objetivo_dict = {}
+    # Diccionario para guardar tipo de OFF por objetivo
+    tipo_off_por_objetivo = {}
+    # Trackear ofensivas ya asignadas por tipo (acumulativo)
+    asignadas_por_tipo = {'SUPER': 0, 'FULL': 0, '3/4': 0, 'MEDIA': 0}
+    ofensivas_restantes = total_ofensivas
+    
+    # Bucle principal: seleccionar categoría → asignar ofensivas → preguntar si continuar
+    continuar_agregando = True
+    
+    while continuar_agregando and (categorias_disponibles or not categorias):
+        # Paso 2: Seleccionar categoría
+        print("\n🎯 Paso 2: Cargar objetivos")
+        print(f"📄 Usando archivo: {archivo_objetivos}")
         
-        while categorias_disponibles:
+        objetivos_actuales = []
+        
+        if categorias_disponibles:
+            # Mostrar categorías disponibles
             print("\n📂 Categorías de objetivos disponibles:")
             for idx, cat in enumerate(categorias_disponibles, 1):
                 num_coords = len(categorias[cat])
                 print(f"  {idx}. {cat} ({num_coords} objetivos)")
             
-            if categorias_seleccionadas:
-                print(f"\n✅ Ya seleccionadas: {', '.join(categorias_seleccionadas)}")
+            if categorias_procesadas:
+                print(f"\n✅ Ya procesadas: {', '.join(categorias_procesadas)}")
             
-            seleccion = input("\n👉 Selecciona categoría (número o nombre, Enter para terminar): ").strip()
+            seleccion = input("\n👉 Selecciona categoría (número o nombre): ").strip()
             
             if not seleccion:
-                # Usuario presionó Enter sin seleccionar, terminar
-                if not categorias_seleccionadas:
-                    print("\n📋 Usando todas las categorías")
-                    categorias_seleccionadas = list(categorias.keys())
-                break
+                print("❌ Debes seleccionar una categoría")
+                continue
             
             # Procesar selección
             categoria_seleccionada = None
@@ -181,54 +190,48 @@ def menu_crear_plan():
                 if 0 <= idx_seleccion < len(categorias_disponibles):
                     categoria_seleccionada = categorias_disponibles[idx_seleccion]
             else:
-                # Buscar por nombre
                 if seleccion in categorias_disponibles:
                     categoria_seleccionada = seleccion
             
-            if categoria_seleccionada:
-                categorias_seleccionadas.append(categoria_seleccionada)
-                categorias_disponibles.remove(categoria_seleccionada)
-                print(f"✅ Categoría '{categoria_seleccionada}' añadida")
-            else:
+            if not categoria_seleccionada:
                 print("❌ Selección inválida")
+                continue
+            
+            # Cargar objetivos de esta categoría
+            print(f"\n✅ Categoría seleccionada: {categoria_seleccionada}")
+            print("🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
+            objetivos_actuales = leer_objetivos_por_categoria(archivo_objetivos, categoria_seleccionada, mundo=mundo_seleccionado, usar_api=True)
+            
+            if not objetivos_actuales:
+                print("❌ No se pudieron cargar objetivos de esta categoría")
+                continue
+            
+            # Marcar categoría como procesada
+            categorias_procesadas.append(categoria_seleccionada)
+            categorias_disponibles.remove(categoria_seleccionada)
+            
+        elif not categorias:
+            # No hay categorías, cargar todo
+            print("🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
+            objetivos_actuales = leer_objetivos_desde_archivo(archivo_objetivos, mundo=mundo_seleccionado, usar_api=True)
+            if not objetivos_actuales:
+                print("\n❌ No se pudieron cargar los objetivos")
+                input("\nPresiona Enter para continuar...")
+                return
+            continuar_agregando = False  # Solo una vez si no hay categorías
         
-        # Cargar objetivos de las categorías seleccionadas
-        if categorias_seleccionadas:
-            print("\n🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
-            for cat in categorias_seleccionadas:
-                objs_cat = leer_objetivos_por_categoria(archivo_objetivos, cat, mundo=mundo_seleccionado, usar_api=True)
-                objetivos.extend(objs_cat)
-    else:
-        # No hay categorías, usar formato tradicional
-        print("🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
-        objetivos = leer_objetivos_desde_archivo(archivo_objetivos, mundo=mundo_seleccionado, usar_api=True)
-    
-    if not objetivos:
-        print("\n❌ No se pudieron cargar los objetivos")
-        input("\nPresiona Enter para continuar...")
-        return
-    
-    # Configurar ataques por objetivo
-    print("\n⚔️  Paso 3: Configuración de ataques por objetivo")
-    print("  1. Manual (asignar por cada objetivo)")
-    print("  2. Fijo (mismo número para todos)")
-    
-    modo_ataques = input("\n👉 Modo (Enter para 2): ").strip() or "2"
-    
-    # Diccionario para guardar ataques por objetivo
-    ataques_por_objetivo_dict = {}
-    # Diccionario para guardar tipo de OFF por objetivo (si se seleccionó "Todas")
-    tipo_off_por_objetivo = {}
-    
-    if modo_ataques == "1":
-        # Modo manual: pedir para cada objetivo
-        print("\n📋 Asignar ataques manualmente:")
-        ofensivas_restantes = total_ofensivas
+        # Paso 3: Asignar ataques para los objetivos de esta categoría
+        print("\n⚔️  Paso 3: Configuración de ataques para esta categoría")
+        print("  1. Manual (asignar por cada objetivo)")
+        print("  2. Fijo (mismo número para todos)")
         
-        # Trackear ofensivas ya asignadas por tipo
-        asignadas_por_tipo = {'SUPER': 0, 'FULL': 0, '3/4': 0, 'MEDIA': 0}
+        modo_ataques = input("\n👉 Modo (Enter para 1): ").strip() or "1"
         
-        for i, objetivo in enumerate(objetivos, 1):
+        if modo_ataques == "1":
+            # Modo manual: pedir para cada objetivo
+            print("\n📋 Asignar ataques manualmente:")
+            
+            for i, objetivo in enumerate(objetivos_actuales, 1):
             coord_str = f"{objetivo['coordenadas'][0]}|{objetivo['coordenadas'][1]}"
             jugador_def = objetivo.get('jugador_defensor', 'Desconocido')
             print(f"\n  [{i}/{len(objetivos)}] Objetivo: {coord_str} - {objetivo['nombre']} (Jugador: {jugador_def})")
@@ -340,44 +343,52 @@ def menu_crear_plan():
                     if tipo_off_objetivo and tipo_off_objetivo in asignadas_por_tipo:
                         asignadas_por_tipo[tipo_off_objetivo] += ataques_por_objetivo_dict[coord_str]
         
-        if ofensivas_restantes > 0:
-            print(f"\n✅ Asignación completa. Ofensivas sin asignar: {ofensivas_restantes}")
-        
-        # Usar el promedio como valor por defecto para la función
-        ataques_por_objetivo = 5
-    else:
-        # Modo fijo: mismo número para todos
-        try:
-            ataques_por_objetivo = int(input("\nAtaques por objetivo (Enter para 5): ").strip() or "5")
-        except:
-            ataques_por_objetivo = 5
-        
-        # Calcular si hay suficientes ofensivas
-        total_necesarias = len(objetivos) * ataques_por_objetivo
-        print(f"\n📊 Cálculo de ofensivas:")
-        print(f"   • Objetivos: {len(objetivos)}")
-        print(f"   • Ofensivas por objetivo: {ataques_por_objetivo}")
-        print(f"   • Total necesarias: {total_necesarias}")
-        print(f"   • Disponibles: {total_ofensivas}")
-        
-        if total_necesarias > total_ofensivas:
-            print(f"\n⚠️  ADVERTENCIA: No hay suficientes ofensivas!")
-            print(f"   Faltan: {total_necesarias - total_ofensivas} ofensivas")
-            respuesta = input("\n¿Continuar de todos modos? (s/n, Enter=s): ").strip().lower()
-            if respuesta == 'n':
-                input("\nPresiona Enter para continuar...")
-                return
-        else:
-            sobrantes = total_ofensivas - total_necesarias
-            print(f"   ✅ Sobran: {sobrantes} ofensivas")
-        
-        # Llenar el diccionario con el mismo valor para todos
-        for i, objetivo in enumerate(objetivos, 1):
-            coord_str = f"{objetivo['coordenadas'][0]}|{objetivo['coordenadas'][1]}"
-            ataques_por_objetivo_dict[coord_str] = ataques_por_objetivo
+            # Agregar objetivos actuales a la lista total
+            objetivos_totales.extend(objetivos_actuales)
             
-            # Si se seleccionó "Todas", preguntar tipo de OFF para cada objetivo
-            if filtro_seleccionado == "5":
+            # Preguntar si quiere añadir otra categoría
+            if categorias_disponibles:
+                print(f"\n✅ Asignación completa para esta categoría. Ofensivas sin asignar: {ofensivas_restantes}")
+                print(f"\n📊 Quedan {len(categorias_disponibles)} categoría(s) disponible(s): {', '.join(categorias_disponibles)}")
+                continuar = input("¿Deseas añadir otra categoría? (s/n, Enter=n): ").strip().lower()
+                continuar_agregando = (continuar == 's')
+            else:
+                print(f"\n✅ Asignación completa. No quedan más categorías. Ofensivas sin asignar: {ofensivas_restantes}")
+                continuar_agregando = False
+        
+        else:
+            # Modo fijo: mismo número para todos
+            try:
+                ataques_por_objetivo = int(input("\nAtaques por objetivo (Enter para 5): ").strip() or "5")
+            except:
+                ataques_por_objetivo = 5
+            
+            # Calcular si hay suficientes ofensivas
+            total_necesarias = len(objetivos_actuales) * ataques_por_objetivo
+            print(f"\n📊 Cálculo de ofensivas:")
+            print(f"   • Objetivos: {len(objetivos_actuales)}")
+            print(f"   • Ofensivas por objetivo: {ataques_por_objetivo}")
+            print(f"   • Total necesarias: {total_necesarias}")
+            print(f"   • Disponibles restantes: {ofensivas_restantes}")
+        
+            if total_necesarias > ofensivas_restantes:
+                print(f"\n⚠️  ADVERTENCIA: No hay suficientes ofensivas restantes!")
+                print(f"   Faltan: {total_necesarias - ofensivas_restantes} ofensivas")
+                respuesta = input("\n¿Continuar de todos modos? (s/n, Enter=s): ").strip().lower()
+                if respuesta == 'n':
+                    continue
+            else:
+                sobrantes = ofensivas_restantes - total_necesarias
+                print(f"   ✅ Sobran: {sobrantes} ofensivas")
+            
+            # Llenar el diccionario con el mismo valor para todos
+            for i, objetivo in enumerate(objetivos_actuales, 1):
+                coord_str = f"{objetivo['coordenadas'][0]}|{objetivo['coordenadas'][1]}"
+                ataques_por_objetivo_dict[coord_str] = ataques_por_objetivo
+                ofensivas_restantes -= ataques_por_objetivo
+                
+                # Si se seleccionó "Todas", preguntar tipo de OFF para cada objetivo
+                if filtro_seleccionado == "5":
                 jugador_def = objetivo.get('jugador_defensor', 'Desconocido')
                 print(f"\n  [{i}/{len(objetivos)}] Objetivo: {coord_str} - {objetivo['nombre']} (Jugador: {jugador_def})")
                 print("  🎯 ¿Qué tipo de OFF usar para este objetivo?")
@@ -426,7 +437,28 @@ def menu_crear_plan():
                         print("      ⚠️  Entrada inválida, usando cualquiera")
                         tipo_off_objetivo = None
                 
-                tipo_off_por_objetivo[coord_str] = tipo_off_objetivo
+                    tipo_off_por_objetivo[coord_str] = tipo_off_objetivo
+            
+            # Agregar objetivos actuales a la lista total
+            objetivos_totales.extend(objetivos_actuales)
+            
+            # Preguntar si quiere añadir otra categoría
+            if categorias_disponibles:
+                print(f"\n✅ Asignación completa para esta categoría. Ofensivas sin asignar: {ofensivas_restantes}")
+                print(f"\n📊 Quedan {len(categorias_disponibles)} categoría(s) disponible(s): {', '.join(categorias_disponibles)}")
+                continuar = input("¿Deseas añadir otra categoría? (s/n, Enter=n): ").strip().lower()
+                continuar_agregando = (continuar == 's')
+            else:
+                print(f"\n✅ Asignación completa. No quedan más categorías. Ofensivas sin asignar: {ofensivas_restantes}")
+                continuar_agregando = False
+    
+    # Usar todos los objetivos acumulados
+    objetivos = objetivos_totales
+    
+    if not objetivos:
+        print("\n❌ No se asignaron objetivos")
+        input("\nPresiona Enter para continuar...")
+        return
     
     # Seleccionar tipo de tropa para cálculo de tiempos
     print("\n🏃 Paso 3.5: Tipo de tropa para calcular tiempos")
