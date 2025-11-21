@@ -150,42 +150,52 @@ def menu_crear_plan():
     categorias = leer_categorias_objetivos(archivo_objetivos)
     
     objetivos = []
+    categorias_seleccionadas = []
     
     if categorias:
-        # Hay categorías, preguntar cuál usar
-        print("\n📂 Categorías de objetivos disponibles:")
-        categorias_lista = list(categorias.keys())
-        for idx, cat in enumerate(categorias_lista, 1):
-            num_coords = len(categorias[cat])
-            print(f"  {idx}. {cat} ({num_coords} objetivos)")
+        # Hay categorías, permitir selección múltiple
+        categorias_disponibles = list(categorias.keys())
         
-        seleccion = input("\n👉 Selecciona categoría (número o nombre, Enter para usar todas): ").strip()
-        
-        if seleccion:
-            # Usuario seleccionó una categoría específica
+        while categorias_disponibles:
+            print("\n📂 Categorías de objetivos disponibles:")
+            for idx, cat in enumerate(categorias_disponibles, 1):
+                num_coords = len(categorias[cat])
+                print(f"  {idx}. {cat} ({num_coords} objetivos)")
+            
+            if categorias_seleccionadas:
+                print(f"\n✅ Ya seleccionadas: {', '.join(categorias_seleccionadas)}")
+            
+            seleccion = input("\n👉 Selecciona categoría (número o nombre, Enter para terminar): ").strip()
+            
+            if not seleccion:
+                # Usuario presionó Enter sin seleccionar, terminar
+                if not categorias_seleccionadas:
+                    print("\n📋 Usando todas las categorías")
+                    categorias_seleccionadas = list(categorias.keys())
+                break
+            
+            # Procesar selección
+            categoria_seleccionada = None
             if seleccion.isdigit():
                 idx_seleccion = int(seleccion) - 1
-                if 0 <= idx_seleccion < len(categorias_lista):
-                    categoria_seleccionada = categorias_lista[idx_seleccion]
-                else:
-                    print("❌ Selección inválida, usando todas")
-                    categoria_seleccionada = None
+                if 0 <= idx_seleccion < len(categorias_disponibles):
+                    categoria_seleccionada = categorias_disponibles[idx_seleccion]
             else:
                 # Buscar por nombre
-                categoria_seleccionada = seleccion if seleccion in categorias else None
-                if not categoria_seleccionada:
-                    print(f"❌ Categoría '{seleccion}' no encontrada, usando todas")
+                if seleccion in categorias_disponibles:
+                    categoria_seleccionada = seleccion
             
             if categoria_seleccionada:
-                print(f"\n✅ Usando categoría: {categoria_seleccionada}")
-                print("🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
-                objetivos = leer_objetivos_por_categoria(archivo_objetivos, categoria_seleccionada, mundo=mundo_seleccionado, usar_api=True)
+                categorias_seleccionadas.append(categoria_seleccionada)
+                categorias_disponibles.remove(categoria_seleccionada)
+                print(f"✅ Categoría '{categoria_seleccionada}' añadida")
+            else:
+                print("❌ Selección inválida")
         
-        # Si no seleccionó o hubo error, usar todas las categorías
-        if not objetivos:
-            print("\n📋 Usando todas las categorías")
-            print("🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
-            for cat in categorias_lista:
+        # Cargar objetivos de las categorías seleccionadas
+        if categorias_seleccionadas:
+            print("\n🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
+            for cat in categorias_seleccionadas:
                 objs_cat = leer_objetivos_por_categoria(archivo_objetivos, cat, mundo=mundo_seleccionado, usar_api=True)
                 objetivos.extend(objs_cat)
     else:
