@@ -244,9 +244,10 @@ def menu_crear_plan():
                 print(f"    2. FULL (disponibles: {full_disp})")
                 print(f"    3. 3/4 (disponibles: {tres_disp})")
                 print(f"    4. MEDIA (disponibles: {media_disp})")
-                print(f"    5. Cualquiera (usar todas las disponibles)")
+                print(f"    5. Mixta SUPER+FULL (combinar ambos tipos)")
+                print(f"    6. Cualquiera (usar todas las disponibles)")
                 
-                tipo_input = input("    👉 Selecciona tipo (Enter para 5): ").strip() or "5"
+                tipo_input = input("    👉 Selecciona tipo (Enter para 6): ").strip() or "6"
                 if tipo_input == "1":
                     tipo_off_objetivo = "SUPER"
                 elif tipo_input == "2":
@@ -255,6 +256,9 @@ def menu_crear_plan():
                     tipo_off_objetivo = "3/4"
                 elif tipo_input == "4":
                     tipo_off_objetivo = "MEDIA"
+                elif tipo_input == "5":
+                    # Modo mixto: preguntar cuántas de cada tipo
+                    tipo_off_objetivo = "MIXTA"
                 
                 tipo_off_por_objetivo[coord_str] = tipo_off_objetivo
             
@@ -267,27 +271,64 @@ def menu_crear_plan():
                 else:
                     break
             
-            try:
-                max_sugerido = min(5, ofensivas_restantes)
-                num_ataques = int(input(f"    ¿Cuántas ofensivas? (Enter para {max_sugerido}): ").strip() or str(max_sugerido))
-                
-                if num_ataques > ofensivas_restantes:
-                    print(f"  ⚠️  Solo hay {ofensivas_restantes} ofensivas disponibles. Ajustando...")
-                    num_ataques = ofensivas_restantes
-                
-                ataques_por_objetivo_dict[coord_str] = num_ataques
-                ofensivas_restantes -= num_ataques
-                
-                # Actualizar contador de asignadas por tipo (solo si se seleccionó tipo específico)
-                if tipo_off_objetivo and tipo_off_objetivo in asignadas_por_tipo:
-                    asignadas_por_tipo[tipo_off_objetivo] += num_ataques
-                
-            except:
-                ataques_por_objetivo_dict[coord_str] = min(5, ofensivas_restantes)
-                ofensivas_restantes -= ataques_por_objetivo_dict[coord_str]
-                # Actualizar contador de asignadas por tipo
-                if tipo_off_objetivo and tipo_off_objetivo in asignadas_por_tipo:
-                    asignadas_por_tipo[tipo_off_objetivo] += ataques_por_objetivo_dict[coord_str]
+            # Si es modo mixto, preguntar cantidades de cada tipo
+            if tipo_off_objetivo == "MIXTA":
+                try:
+                    super_disp_actual = super_total - asignadas_por_tipo['SUPER']
+                    full_disp_actual = full_total - asignadas_por_tipo['FULL']
+                    
+                    print(f"\n    🔄 Modo Mixto - Especifica cantidades:")
+                    num_super = int(input(f"      SUPER (disponibles: {super_disp_actual}): ").strip() or "0")
+                    num_full = int(input(f"      FULL (disponibles: {full_disp_actual}): ").strip() or "0")
+                    
+                    # Validar disponibilidad
+                    if num_super > super_disp_actual:
+                        print(f"      ⚠️  Solo hay {super_disp_actual} SUPER disponibles. Ajustando...")
+                        num_super = super_disp_actual
+                    if num_full > full_disp_actual:
+                        print(f"      ⚠️  Solo hay {full_disp_actual} FULL disponibles. Ajustando...")
+                        num_full = full_disp_actual
+                    
+                    num_ataques = num_super + num_full
+                    ataques_por_objetivo_dict[coord_str] = num_ataques
+                    ofensivas_restantes -= num_ataques
+                    
+                    # Actualizar contadores por tipo
+                    asignadas_por_tipo['SUPER'] += num_super
+                    asignadas_por_tipo['FULL'] += num_full
+                    
+                    # Guardar la composición mixta en el diccionario
+                    tipo_off_por_objetivo[coord_str] = {
+                        'tipo': 'MIXTA',
+                        'SUPER': num_super,
+                        'FULL': num_full
+                    }
+                except:
+                    print("      ⚠️  Entrada inválida, saltando este objetivo")
+                    ataques_por_objetivo_dict[coord_str] = 0
+            else:
+                # Modo normal (un solo tipo)
+                try:
+                    max_sugerido = min(5, ofensivas_restantes)
+                    num_ataques = int(input(f"    ¿Cuántas ofensivas? (Enter para {max_sugerido}): ").strip() or str(max_sugerido))
+                    
+                    if num_ataques > ofensivas_restantes:
+                        print(f"  ⚠️  Solo hay {ofensivas_restantes} ofensivas disponibles. Ajustando...")
+                        num_ataques = ofensivas_restantes
+                    
+                    ataques_por_objetivo_dict[coord_str] = num_ataques
+                    ofensivas_restantes -= num_ataques
+                    
+                    # Actualizar contador de asignadas por tipo (solo si se seleccionó tipo específico)
+                    if tipo_off_objetivo and tipo_off_objetivo in asignadas_por_tipo:
+                        asignadas_por_tipo[tipo_off_objetivo] += num_ataques
+                    
+                except:
+                    ataques_por_objetivo_dict[coord_str] = min(5, ofensivas_restantes)
+                    ofensivas_restantes -= ataques_por_objetivo_dict[coord_str]
+                    # Actualizar contador de asignadas por tipo
+                    if tipo_off_objetivo and tipo_off_objetivo in asignadas_por_tipo:
+                        asignadas_por_tipo[tipo_off_objetivo] += ataques_por_objetivo_dict[coord_str]
         
         if ofensivas_restantes > 0:
             print(f"\n✅ Asignación completa. Ofensivas sin asignar: {ofensivas_restantes}")
@@ -339,9 +380,10 @@ def menu_crear_plan():
                 print(f"    2. FULL (disponibles: {full_disp})")
                 print(f"    3. 3/4 (disponibles: {tres_disp})")
                 print(f"    4. MEDIA (disponibles: {media_disp})")
-                print(f"    5. Cualquiera (usar todas las disponibles)")
+                print(f"    5. Mixta SUPER+FULL (combinar ambos tipos)")
+                print(f"    6. Cualquiera (usar todas las disponibles)")
                 
-                tipo_input = input("    👉 Selecciona tipo (Enter para 5): ").strip() or "5"
+                tipo_input = input("    👉 Selecciona tipo (Enter para 6): ").strip() or "6"
                 tipo_off_objetivo = None
                 if tipo_input == "1":
                     tipo_off_objetivo = "SUPER"
@@ -351,6 +393,28 @@ def menu_crear_plan():
                     tipo_off_objetivo = "3/4"
                 elif tipo_input == "4":
                     tipo_off_objetivo = "MEDIA"
+                elif tipo_input == "5":
+                    # Modo mixto en modo fijo
+                    try:
+                        print(f"\n    🔄 Modo Mixto - De las {ataques_por_objetivo} ofensivas, especifica:")
+                        num_super = int(input(f"      SUPER (disponibles: {super_disp}): ").strip() or "0")
+                        num_full = int(input(f"      FULL (disponibles: {full_disp}): ").strip() or "0")
+                        
+                        if num_super + num_full != ataques_por_objetivo:
+                            print(f"      ⚠️  La suma debe ser {ataques_por_objetivo}. Ajustando proporcionalmente...")
+                            total = num_super + num_full
+                            if total > 0:
+                                num_super = round((num_super / total) * ataques_por_objetivo)
+                                num_full = ataques_por_objetivo - num_super
+                        
+                        tipo_off_objetivo = {
+                            'tipo': 'MIXTA',
+                            'SUPER': num_super,
+                            'FULL': num_full
+                        }
+                    except:
+                        print("      ⚠️  Entrada inválida, usando cualquiera")
+                        tipo_off_objetivo = None
                 
                 tipo_off_por_objetivo[coord_str] = tipo_off_objetivo
     

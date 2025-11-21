@@ -335,8 +335,25 @@ def asignar_optimizando_moral(pueblos_atacantes, objetivos, ataques_por_objetivo
                     # Si se especificó un tipo para este objetivo, filtrar
                     if tipo_requerido:
                         tipo_pueblo = pueblo.get('tipo_off')
-                        if tipo_pueblo != tipo_requerido:
-                            continue  # Este pueblo no es del tipo requerido, saltar
+                        
+                        # Manejar modo mixto
+                        if isinstance(tipo_requerido, dict) and tipo_requerido.get('tipo') == 'MIXTA':
+                            # Modo mixto: verificar si el pueblo es SUPER o FULL
+                            # y si aún quedan ofensivas de ese tipo por asignar
+                            if tipo_pueblo not in ['SUPER', 'FULL']:
+                                continue
+                            
+                            # Contar cuántas de este tipo ya se han asignado a este objetivo
+                            asignados_este_tipo = sum(1 for ataque in obj_info['ataques_asignados'] 
+                                                     if ataque.get('tipo_off') == tipo_pueblo)
+                            necesarios_este_tipo = tipo_requerido.get(tipo_pueblo, 0)
+                            
+                            if asignados_este_tipo >= necesarios_este_tipo:
+                                continue  # Ya se asignaron suficientes de este tipo
+                        else:
+                            # Modo normal: un solo tipo
+                            if tipo_pueblo != tipo_requerido:
+                                continue  # Este pueblo no es del tipo requerido, saltar
                 
                 puntos_defensor = objetivo.get('puntos_defensor', 0)
                 
