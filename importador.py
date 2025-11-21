@@ -147,15 +147,16 @@ def leer_csv_ofensivas(ruta_archivo, filtro_tipo=None, mundo=None, usar_api=True
         if stats:
             print(f"   📊 {' | '.join(stats)}")
         
-        # Enriquecer con puntos de jugadores desde API
-        if mundo and usar_api and jugadores_unicos:
-            print(f"\n🌍 Consultando puntos de {len(jugadores_unicos)} jugadores desde API...")
+        # Enriquecer con datos desde API
+        if mundo and usar_api:
+            print(f"\n🌍 Consultando datos desde API del mundo {mundo}...")
             
             try:
                 from api_gt import APIGuerrasTribales
                 
                 api = APIGuerrasTribales(mundo)
                 api.cargar_jugadores()
+                pueblos_api = api.cargar_pueblos()
                 
                 # Crear un mapa de jugador -> puntos
                 puntos_por_jugador = {}
@@ -174,15 +175,22 @@ def leer_csv_ofensivas(ruta_archivo, filtro_tipo=None, mundo=None, usar_api=True
                         puntos_por_jugador[nombre_jugador] = 0
                         print(f"   ⚠️  Jugador '{nombre_jugador}' no encontrado en API")
                 
-                # Actualizar puntos en todos los pueblos
+                # Actualizar puntos y village_id en todos los pueblos
                 actualizados = 0
+                villages_encontrados = 0
                 for pueblo in pueblos:
                     if pueblo['jugador'] in puntos_por_jugador:
                         pueblo['puntos_jugador'] = puntos_por_jugador[pueblo['jugador']]
                         if pueblo['puntos_jugador'] > 0:
                             actualizados += 1
+                    
+                    # Obtener village_id desde la API
+                    coordenadas = pueblo['coordenadas']
+                    if coordenadas in pueblos_api:
+                        pueblo['village_id'] = pueblos_api[coordenadas]['id']
+                        villages_encontrados += 1
                 
-                print(f"✅ Puntos actualizados para {actualizados}/{len(pueblos)} pueblos")
+                print(f"✅ Datos actualizados desde API (puntos: {actualizados}/{len(pueblos)}, village_id: {villages_encontrados}/{len(pueblos)})")
                 
             except ImportError:
                 print("⚠️  Módulo api_gt no disponible")
@@ -374,6 +382,123 @@ def leer_objetivos_desde_archivo(ruta_archivo, mundo=None, usar_api=True):
     except FileNotFoundError:
         print(f"❌ Archivo no encontrado: {ruta_archivo}")
         return []
+
+
+def leer_categorias_objetivos(ruta_archivo):
+    """
+    Lee las categorías disponibles en el archivo de objetivos.
+    Formato esperado: "NombreCategoria: coord1 coord2 coord3"
+    
+    Args:
+        ruta_archivo: ruta al archivo con objetivos
+    
+    Returns:
+        dict: {nombre_categoria: [coordenadas]}
+    """
+    categorias = {}
+    
+    try:
+        with open(ruta_archivo, 'r', encoding='utf-8') as f:
+            lineas = f.readlines()
+            
+        for linea in lineas:
+            linea = linea.strip()
+            
+            # Ignorar comentarios y líneas vacías
+            if not linea or linea.startswith('#'):
+                continue
+            
+            # Buscar formato "Categoria: coord1 coord2 coord3"
+            if ':' in linea:
+                partes = linea.split(':', 1)
+                nombre_categoria = partes[0].strip()
+                coordenadas_str = partes[1].strip()
+                
+                # Extraer coordenadas
+                coordenadas = []
+                for coord in coordenadas_str.split():
+                    coord_partes = coord.split('|')
+                    if len(coord_partes) >= 2:
+                        try:
+                            x, y = int(coord_partes[0]), int(coord_partes[1])
+                            coordenadas.append((x, y))
+                        except ValueError:
+                            continue
+                
+                if coordenadas:
+                    categorias[nombre_categoria] = coordenadas
+        
+        return categorias
+        
+    except FileNotFoundError:
+        print(f"❌ Archivo no encontrado: {ruta_archivo}")
+        return {}
+
+
+def leer_objetivos_por_categoria(ruta_archivo, categoria, mundo=None, usar_api=True):
+    """
+    Lee objetivos de una categoría específica del archivo.
+    
+    Args:
+        ruta_archivo: ruta al archivo con objetivos
+        categoria: nombre de la categoría a leer
+        mundo: código del mundo para consultar API
+        usar_api: si True, enriquece con datos de la API
+    
+    Returns:
+        list: lista de objetivos de esa categoría
+    """
+    categorias = leer_categorias_objetivos(ruta_archivo)
+    
+    if categoria not in categorias:
+        print(f"❌ Categoría '{categoria}' no encontrada en el archivo")
+        return []
+    
+    coordenadas_simples = categorias[categoria]
+    objetivos = []
+    
+    # Si hay mundo y API habilitada, enriquecer
+    if mundo and usar_api and coordenadas_simples:
+        print(f"🌍 Consultando API de {mundo.upper()}...")
+        
+        try:
+            from api_gt import APIGuerrasTribales
+            
+            api = APIGuerrasTribales(mundo)
+            pueblos_info = api.obtener_info_multiple(coordenadas_simples)
+            
+            for info in pueblos_info:
+                objetivo = {
+                    'coordenadas': info['coordenadas'],
+                    'nombre': info['nombre'],
+                    'jugador_defensor': info.get('jugador', 'Desconocido'),
+                    'puntos_defensor': info.get('puntos_jugador', 0),
+                    'puntos_aldea': info.get('puntos', 0),
+                    'ataques_asignados': []
+                }
+                objetivos.append(objetivo)
+            
+            print(f"✅ {len(objetivos)} objetivos de '{categoria}' enriquecidos con datos de la API")
+            return objetivos
+            
+        except ImportError:
+            print("⚠️  Módulo api_gt no disponible, usando datos básicos")
+        except Exception as e:
+            print(f"⚠️  Error al consultar API: {e}")
+    
+    # Si no hay API, crear objetivos básicos
+    for x, y in coordenadas_simples:
+        objetivo = {
+            'coordenadas': (x, y),
+            'nombre': f"Objetivo {x}|{y}",
+            'jugador_defensor': "Desconocido",
+            'puntos_defensor': 0,
+            'ataques_asignados': []
+        }
+        objetivos.append(objetivo)
+    
+    print(f"✅ {len(objetivos)} objetivos de '{categoria}' cargados")
+    return objetivos
 
 
 def crear_archivo_ejemplo_pueblos(ruta_archivo):

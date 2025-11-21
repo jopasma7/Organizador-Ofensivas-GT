@@ -8,6 +8,8 @@ from datetime import datetime, timedelta
 from importador import (
     leer_pueblos_desde_archivo, 
     leer_objetivos_desde_archivo,
+    leer_categorias_objetivos,
+    leer_objetivos_por_categoria,
     crear_archivo_ejemplo_pueblos,
     crear_archivo_ejemplo_objetivos,
     guardar_plan_json,
@@ -166,9 +168,52 @@ def menu_crear_plan():
     archivo_objetivos = "data/objetivos.txt"
     print(f"📄 Usando archivo: {archivo_objetivos}")
     
-    # Siempre usar API para obtener puntos (necesario para calcular moral)
-    print("🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
-    objetivos = leer_objetivos_desde_archivo(archivo_objetivos, mundo=mundo_seleccionado, usar_api=True)
+    # Leer categorías disponibles
+    categorias = leer_categorias_objetivos(archivo_objetivos)
+    
+    objetivos = []
+    
+    if categorias:
+        # Hay categorías, preguntar cuál usar
+        print("\n📂 Categorías de objetivos disponibles:")
+        categorias_lista = list(categorias.keys())
+        for idx, cat in enumerate(categorias_lista, 1):
+            num_coords = len(categorias[cat])
+            print(f"  {idx}. {cat} ({num_coords} objetivos)")
+        
+        seleccion = input("\n👉 Selecciona categoría (número o nombre, Enter para usar todas): ").strip()
+        
+        if seleccion:
+            # Usuario seleccionó una categoría específica
+            if seleccion.isdigit():
+                idx_seleccion = int(seleccion) - 1
+                if 0 <= idx_seleccion < len(categorias_lista):
+                    categoria_seleccionada = categorias_lista[idx_seleccion]
+                else:
+                    print("❌ Selección inválida, usando todas")
+                    categoria_seleccionada = None
+            else:
+                # Buscar por nombre
+                categoria_seleccionada = seleccion if seleccion in categorias else None
+                if not categoria_seleccionada:
+                    print(f"❌ Categoría '{seleccion}' no encontrada, usando todas")
+            
+            if categoria_seleccionada:
+                print(f"\n✅ Usando categoría: {categoria_seleccionada}")
+                print("🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
+                objetivos = leer_objetivos_por_categoria(archivo_objetivos, categoria_seleccionada, mundo=mundo_seleccionado, usar_api=True)
+        
+        # Si no seleccionó o hubo error, usar todas las categorías
+        if not objetivos:
+            print("\n📋 Usando todas las categorías")
+            print("🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
+            for cat in categorias_lista:
+                objs_cat = leer_objetivos_por_categoria(archivo_objetivos, cat, mundo=mundo_seleccionado, usar_api=True)
+                objetivos.extend(objs_cat)
+    else:
+        # No hay categorías, usar formato tradicional
+        print("🌍 Consultando API para obtener info de objetivos (necesario para moral)...")
+        objetivos = leer_objetivos_desde_archivo(archivo_objetivos, mundo=mundo_seleccionado, usar_api=True)
     
     if not objetivos:
         print("\n❌ No se pudieron cargar los objetivos")
