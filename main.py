@@ -74,30 +74,8 @@ def menu_crear_plan():
     print("📝 CREAR PLAN DE ATAQUE")
     print("="*80)
     
-    # Seleccionar mundo
-    from config_mundos import listar_mundos_disponibles, obtener_config
-    
-    print("\n🌍 Paso 0: Seleccionar mundo")
-    print("-"*80)
-    mundos = listar_mundos_disponibles()
-    
-    for idx, (id_mundo, nombre) in enumerate(mundos, 1):
-        config = obtener_config(id_mundo)
-        print(f"  {idx}. {nombre} (Velocidad: {config['velocidad']}x)")
-    
-    try:
-        seleccion = input(f"\n👉 Selecciona mundo (Enter para 1): ").strip() or "1"
-        idx_mundo = int(seleccion) - 1
-        if 0 <= idx_mundo < len(mundos):
-            mundo_seleccionado = mundos[idx_mundo][0]
-            config_mundo = obtener_config(mundo_seleccionado)
-            print(f"✅ Mundo seleccionado: {config_mundo['nombre']}")
-        else:
-            mundo_seleccionado = 'es95'
-            print(f"⚠️  Selección inválida, usando ES95")
-    except:
-        mundo_seleccionado = 'es95'
-        print(f"⚠️  Selección inválida, usando ES95")
+    # Usar siempre el mundo ES95
+    mundo_seleccionado = 'es95'
     
     # Cargar pueblos atacantes desde CSV
     print("\n📍 Paso 1: Cargar pueblos atacantes desde CSV")
